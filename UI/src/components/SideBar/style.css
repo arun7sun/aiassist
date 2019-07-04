@@ -1,0 +1,99 @@
+
+/****side-bar***/
+
+.side-bar{
+    background-color:white;
+    width: 15%;
+    position: fixed;
+    left: 0;
+    top:50px; 
+    height: 100vh;
+    overflow: auto;
+  }
+  .side-bar .welcome{
+     background-color: #006fb9;
+     padding: 10px 10px 0px;
+     border-bottom: 3px solid black;
+  }
+  .side-bar .welcome-box{
+    padding: 0;
+    list-style: none;
+  }
+  .side-bar .welcome-box li{
+    color: white;
+    font-size: 14px;
+  }
+  .side-bar .welcome-box li a{
+    color: white;
+  }
+  .side-bar .welcome-box li span{
+    font-weight: bold;
+    filter: blur(0);
+  }
+  .side-bar .icons-area ul{
+    list-style: none;
+    padding: 0;
+  }
+  .side-bar .icons-area li .fa{
+    color: #4f9099;
+    font-size: 25px;
+    padding: 0 15px;
+  }
+  
+  /*** .sidebar-nav-area***/
+  .side-bar .sidebar-nav-area{
+    border-bottom: 3px solid black;
+  }
+  .side-bar .sidebar-nav-area .text-blue{
+    color: #006fb9;
+  }
+  .side-bar .menu-icons{
+    display: none;
+  }
+  .side-bar .menu-icons .dropdown-menu{
+    margin-left: -125px;
+  }
+  .side-bar .menu-icons .fa{
+    color: white;
+    padding: 1px;
+  }
+  .side-bar .sidebar-nav-area .icon-color{
+    color: #fdba31;
+  }
+  .side-bar .sidebar-nav-area .btn{
+    width: 100%;
+  }
+  .side-bar .sidebar-nav-area ul{
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  .side-bar .sidebar-nav-area .btn{
+    max-width: 100%;
+    padding: 5px;
+    margin: 0;
+    border-radius: 0;
+    text-align: left;
+  }
+  .side-bar .sidebar-nav-area ul li:hover{
+    border-left: 5px solid  #006fb9;
+  }
+  .side-bar .sidebar-nav-area ul li{
+    display: block;
+    border-left: 5px solid transparent;
+  }
+  .side-bar .sidebar-nav-area ul li a{
+    margin:0;
+    font-size: 13px;
+    padding: 10px;
+    color: #006fb9;
+  }
+  .side-bar .sidebar-nav-area ul li a i{
+    margin: 0 10px;
+  }
+  .side-bar .sidebar-nav-area ul li a:hover{
+    background-color: black;
+    color: white;
+  }
+  
+  

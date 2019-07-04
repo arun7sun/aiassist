@@ -1,0 +1,78 @@
+@import "~styles/variables";
+ .Speed-date {
+	 box-shadow:-2px 2px 11px 0px #d5d5d5;
+	 background: white;
+	 margin-top: 15px;
+	 margin-right: 0;
+	 padding: 12px;
+	 width: 99%;
+	 margin-left: 0;
+}
+ .Speed-date .react-datepicker-wrapper {
+	 width: 100%;
+}
+ .Speed-date .react-datepicker-wrapper .react-datepicker__input-container {
+	 width: 100%;
+}
+ .Speed-date .react-datepicker-wrapper .react-datepicker__input-container .date {
+	 width: 100%;
+	 border: none;
+}
+.Speed-date .css-1hwfws3{
+	padding: 7px 8px !important;
+}
+
+.Speed-date .btn-warning{
+	padding: 10px 0;
+    width: 40%;
+    margin: 15px auto 0 33.33%;
+    border: none;
+    background-color: rgba(252,133,1) !important;
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 14px !important;
+}
+.Speed-date .btn-warning:hover{
+	background-color: #ea0971!important;
+}
+
+.Speed-date .btn-warning:focus{
+    background-color: rgba(252,133,1) !important;
+    color: white;
+}
+
+.col-md-12{
+	padding: 0 5px;
+}
+ .Speed-date .date-container {
+	 display: inline-flex;
+	 width: 100%;
+	 background: #fff f;
+	 border-radius: 6px;
+	 height: auto;
+	 text-align: center;
+	 padding: 10px 10px 10px 10px;
+	 box-shadow: 0px 0px 2px 1px #d5d5d5;
+	 margin-bottom: 15px;
+}
+ .Speed-date .date-container i {
+	 float: right;
+}
+ .Speed-date .lbldate {
+	 opacity: 0.7;
+	 font-weight: bold
+}
+ 
+.Speed-date .speed-btn {
+	    
+		width: 50%;
+		float: right;
+		background: #fff f;
+		border-radius: 6px;
+		height: auto;
+		background: #ee0979;
+		margin-top: 20px;
+		padding: 10px 10px 10px 10px;
+		box-shadow: 0px 0px 2px 1px #d5d5d5;
+}

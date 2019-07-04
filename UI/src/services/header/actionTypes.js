@@ -1,0 +1,12 @@
+//for widget
+export const GET_HEADER = 'GET_HEADER';
+export const GET_HEADER_ERROR = 'GET_HEADER_ERROR';
+export const GET_HEADER_REQUEST = 'GET_HEADER_REQUEST';
+
+export const UPDATE_HEADER = 'UPDATE_HEADER';
+export const UPDATE_HEADER_ERROR = 'UPDATE_HEADER_ERROR';
+export const UPDATE_HEADER_REQUEST = 'UPDATE_HEADER_REQUEST';
+
+
+
+

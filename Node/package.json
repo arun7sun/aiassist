@@ -1,0 +1,56 @@
+{
+    "name": "walmart-node",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "nodemonConfig": {
+        "ignore": [
+            "*.json"
+        ]
+    },
+    "scripts": {
+        "start": "nodemon server --exec babel-node"
+    },
+    "dependencies": {
+        "@azure/cosmos": "^2.1.5",
+        "azure-storage": "^2.10.3",
+        "babel-cli": "^6.24.1",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-stage-1": "^6.24.1",
+        "body-parser": "^1.18.2",
+        "compression": "^1.7.2",
+        "cors": "^2.8.4",
+        "dotenv": "^4.0.0",
+        "express": "^4.16.2",
+        "express-mung": "^0.5.1",
+        "jwt-simple": "^0.5.6",
+        "knex": "^0.16.5",
+        "lodash": "^4.17.5",
+        "moment": "^2.20.1",
+        "morgan": "^1.9.0",
+        "mssql": "^5.1.0",
+        "nocache": "^2.0.0",
+        "node-cron": "^2.0.3",
+        "nodemon": "^1.11.0",
+        "passport": "^0.4.0",
+        "passport-google-oauth20": "^2.0.0",
+        "stream": "0.0.2",
+        "tedious": "^6.1.0"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.24.1",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-stage-1": "^6.24.1",
+        "nodemon": "^1.11.0"
+    },
+    "babel": {
+        "presets": [
+            "env",
+            "stage-1"
+        ]
+    },
+    "authors": [
+        "Adithya"
+    ],
+    "license": "ISC"
+}

@@ -1,0 +1,36 @@
+/* @import "variables"; */
+
+body {
+  overflow-y: auto;
+  /* background-image: url("../images/body-bg.jpg"); */
+  background-color: #eef5f9;
+}
+
+.col-12,
+.col-md-12 {
+  padding: 0;
+  max-width: 100%;
+  flex: auto;
+}
+
+form {
+  margin: 0;
+}
+
+.row {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btn-default {
+  border: none !important;
+  padding: 5px;
+  background-color: white;
+}
+
+/********main-body***/
+.main-body {
+  float: right;
+  width: 85%;
+  padding: 70px 0;
+}

@@ -1,0 +1,38 @@
+@import "~styles/variables";
+
+.next-wrapper label {
+    margin-bottom: 0;
+}
+
+.next-wrapper .left-right-arrow {
+    text-align: center;
+}
+
+.next-wrapper .left-right-arrow>span {
+    padding: 0 3;
+    vertical-align: top;
+    display: inline-block;
+    font-size: 14;
+    font-weight: bold;
+}
+
+.next-wrapper .left-right-arrow button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: white;
+}
+
+.next-wrapper .left-right-arrow button i {
+    font-size: 20;
+    color: #999;
+}
+
+.next-wrapper .left-right-arrow button i:hover {
+    color: black;
+}
+
+.next-wrapper h5 {
+    text-transform: capitalize;
+    line-height: 23;
+}

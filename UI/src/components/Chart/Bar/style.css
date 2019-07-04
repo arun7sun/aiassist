@@ -1,0 +1,6 @@
+@import "~styles/variables";
+.x.axis path {
+    display: block;
+    color:transparent
+}
+

@@ -1,0 +1,75 @@
+@import "~css/bootstrap.min.css";
+@import "/src/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css";
+@import "~css/animate.css";
+@import '~react-datepicker/dist/react-datepicker.css';
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700) screen, projection;
+@import "scrollbar";
+
+:root {
+--font: normal 13px 'Open Sans',
+sans-serif;
+--size: 10px;
+--blue: #2a3f54;
+--gray: #ccc;
+--white: #fff;
+--black: #111;
+--light-blue: #a3daf1;
+--border: 1px solid #ddd;
+--menu-color: #ccc;
+--box-shadow: 0 0 2px #ddd;
+--amount:50;
+--bg: #efe9f3;
+--primary-color: #555;
+--active-blue:#007ab3;
+--x-small: "(max-width: 575px)";
+--small: "(min-width: 576px) and (max-width: 767px)";
+--medium: "(min-width: 768px) and (max-width: 991px)";
+--large: "(min-width: 992px) and (max-width: 1199px)";
+--x-large: "(min-width: 1200px) and (max-width: 1499px)";
+--tv: "(min-width: 1500px)";  
+}
+  
+.box-shadow {
+    -webkit-box-shadow: 0 0 2px #ddd;
+    -moz-box-shadow: 0 0 2px #ddd;
+    box-shadow: 0px 4px 6px 1px #d5d5d5;
+}
+.chart-title {
+    font: var(--font) !important;
+    font-size: var(--size)+ 4 !important;
+    font-weight: bold !important;
+    color: #333 !important;
+}
+.input-select-bg {
+    background: var(--white);
+    border: var(--border);
+    border-radius: var(--size) - 5;
+    padding: var(--size) - 5;
+    margin: 0 var(--size) - 5;
+} 
+.table-stepper {
+    border-right: 1px solid #ccc;
+    margin-right: 10px;
+    padding-right: 5px;
+  }
+  
+  .table-stepper button {
+    background: none;
+    border: none;
+  }
+  
+  .table-stepper button i {
+    background: #888;
+    color: var(--white);
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: var(--size);
+    border: none;
+    transition: .4s;
+    padding: var(--size)-4 var(--size)-2;
+  }
+  
+  .table-stepper button i:hover {
+    background: var(--blue);
+  }
+
