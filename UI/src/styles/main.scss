@@ -1,0 +1,79 @@
+body {
+    background-color: white;
+}
+
+.section{
+    width: 100%;
+}
+
+
+.modal {
+    .modal-dialog {
+        top: 0;
+        max-width: 45%;
+        margin: 10px auto 0;
+        position: fixed;
+        right: 28%;
+    }
+
+    .modal-body {
+        height: 90vh;
+        overflow: auto;
+    }
+
+    .modal-header {
+        background-color: #3b7fc4;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 0;
+        font-size: 18px;
+
+        .close {
+            opacity: 1;
+
+            i {
+                color: white;
+                font-size: 12px;
+                padding: 5px 7px;
+                border-radius: 50%;
+                opacity: 1;
+                border: 1px solid white;
+            }
+        }
+    }
+
+    top: -25px;
+
+    img {
+        width: 100%;
+    }
+
+   
+}
+
+
+
+a.active.focus,
+a.active:focus,
+a.focus,
+a:active.focus,
+a:active:focus,
+a:focus,
+button.active.focus,
+button.active:focus,
+button.focus,
+button:active.focus,
+button:active:focus,
+button:focus,
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+    outline: 0;
+    outline-color: transparent;
+    outline-width: 0;
+    outline-style: none;
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+}

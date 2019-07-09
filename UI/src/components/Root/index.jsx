@@ -10,7 +10,7 @@ import Dashboard from 'scenes';
 
 const Root = (props) => {
     return (
-        <div>
+        <div className="section">
             <Header />
             {/* <header>
                 <nav className="navbar navbar-expand-md  navbar-dark fixed-top">
@@ -20,11 +20,11 @@ const Root = (props) => {
                     </div>
                 </nav>
             </header>*/}
-            <div className='main-body'>
+            {/* <div className='main-body'>
                 <Switch>
                     <Route path="/dashboard" component={Dashboard} />
                 </Switch>
-            </div> 
+            </div>  */}
         </div>
     )
 }
