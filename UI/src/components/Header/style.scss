@@ -1,0 +1,182 @@
+.section {
+  width: 100%;
+}
+
+.navbar {
+  background-color: #004c91;
+  color: white;
+  padding: 0;
+  height: 50px;
+
+  .nav-link {
+    font-weight: 590;
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  .button-hide{
+    background: transparent;
+    padding: 0;
+    border: 0;
+  }
+
+  .navbar-brand {
+    padding: 0;
+  }
+
+  .form-action {
+    width: 75%;
+
+    .input-group {
+      margin: 0 auto;
+      width: 48%;
+    }
+  }
+
+  .form-control {
+    border: 0;
+    min-width: 300px;
+    flex: auto;
+    margin: 0 auto;
+    font-size: 13px;
+    font-weight: 590;
+    height: 30px;
+    line-height: 1.5;
+
+    &:focus {
+      border: none !important;
+      box-shadow: none !important;
+    }
+  }
+
+  .input-group-text {
+    background-color: white;
+    box-shadow: none;
+    border: 0;
+    cursor: pointer;
+  }
+
+  button {
+    padding-top: 27px;
+    color: white;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .dropdown-menu {
+    background-color: white;
+    top: 70px;
+    min-width: 100px;
+    right: 0;
+
+    .nav-item {
+      padding: 0;
+    }
+
+    .dropdown-item {
+      padding: 0 10px;
+
+      &:hover {
+        background-color: #004c91;
+        color: white;
+      }
+
+      &:focus {
+        background-color: #004c91;
+        color: white;
+      }
+
+      &:active {
+        background-color: #004c91;
+        color: white;
+      }
+    }
+
+  }
+
+  .nav-item:hover {
+    .nav-link {
+      color: white;
+    }
+
+  }
+}
+
+@media(min-width:300px) and (max-width:992px) {
+  .navbar {
+    height: auto !important;
+
+    .navbar-brand {
+      margin-right: 0;
+    }
+    .button-hide{
+      display: none;
+    }
+
+    .dropdown-menu {
+      background-color: white;
+      top: 40px;
+      min-width: 100px;
+      right: 0;
+      position: absolute;
+    }
+
+    .ml-auto {
+      padding-right: 15px;
+    }
+
+    .form-action {
+      width: auto;
+    }
+
+    button {
+      padding-top: 0;
+    }
+
+    .dropdown-toggle::after {
+      display: none;
+    }
+
+    input,
+    .fa-microphone,
+    .fa-book,
+    .icon {
+      display: none;
+    }
+
+    .input-group {
+      float: right;
+      width: auto !important;
+    }
+
+    .search-icon {
+      display: flex-end;
+    }
+  }
+
+  .modal {
+    .modal-dialog {
+      top: 0;
+      max-width: 80% !important;
+      margin: 10px auto 0  !important;
+      position: fixed  !important;
+      right: 10%  !important;
+    }
+  }
+}
+
+@media(min-width:993px) and (max-width:1320px) {
+  .navbar {
+    .form-action {
+      width: 100%;
+
+      .input-group {
+        margin: 0 auto;
+        width: 60%;
+      }
+    }
+  }
+}

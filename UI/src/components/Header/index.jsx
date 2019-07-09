@@ -54,29 +54,50 @@ class Header extends Component {
     }
     render = () => {
         return (
-            <nav className="navbar navbar-expand-lg ">
-                <div className="header-left">
-                    <Link to="/dashboard"><img src="/images/Walmart_Logo.png" /></Link>
-                </div>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <i className="fa fa-user"></i>
-                </button>
-                <div className="collapse navbar-collapse header-right-wrapper" id="navbarSupportedContent">
-                    <ul className="navbar-nav ml-auto">
-                    </ul>
-                    <div className='profile'>
-                        <div className="dropdown">
-                            <button className="dropbtn">
-                                <i className="fa fa-caret-down"></i>
-                            </button>
-                            <div className="dropdown-content">
-                                <Link to="/dashboard">Home</Link>
-                                <Link to="/logout">Logout</Link>
+            <div className="section">
+                <nav className="navbar navbar-expand-lg ">
+                    <div className="d-flex">
+                        <Link to="/dashboard" className="navbar-brand" ><img src="/images/Walmart_Logo1.png" /></Link>
+                        <button class="button-hide" data-toggle="collapse" data-target="#collapsibleNavbar">
+                            <i className="fas fa-bars"></i>
+                        </button>
+                        <button class="navbar-toggler collapsed" data-toggle="collapse" data-target="#collapsibleNavbar">
+                            <i className="fas fa-bars"></i>
+                        </button>
+                    </div>
+
+
+                    <form action="submit" className="form-action">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text icon" data-toggle="modal" data-target="#search-box"><i className="fas fa-book"></i></span>
+                            </div>
+                            <input type="text" data-toggle="modal" data-target="#search-box" class="form-control" placeholder="Type Your Query...." />
+                            <div class="input-group-append">
+                                <span class="input-group-text icon" data-toggle="modal" data-target="#search-box"><i className="fas fa-microphone"></i></span>
+                                <span class="input-group-text search-icon" data-toggle="modal" data-target="#search-box"><i className="fas fa-search"></i></span>
                             </div>
                         </div>
+                    </form>
+
+
+                    <div class="navbar-nav d-flex ml-auto">
+                        
+                        <li class="nav-item  dropdown dropdown-toggle" data-toggle="dropdown">
+                            <button class="nav-link btn btn-default" type="button"><img src="images/icon.png" /> Hello <i class="fa fa-caret-down"></i></button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Logout <i class="fa fa-sign-out"></i></a>
+                            </div>
+                        </li>
                     </div>
+
+
+                </nav>
+
+                <div class="navbar-collapse collapse" id="collapsibleNavbar">
+                    <b>Hello</b>
                 </div>
-            </nav>
+            </div>
         )
     }
 }

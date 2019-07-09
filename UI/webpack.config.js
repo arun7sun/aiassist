@@ -1,20 +1,12 @@
 var path = require('path');
 var fs = require('fs');
-const {
-  resolve
-} = require('path');
 const webpack = require('webpack')
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 var config = {
-  context: resolve(__dirname, './src'),
-  entry: 'index.js',
+  entry: './src',
   output: {
-    path: resolve(__dirname, './dist'),
-    filename: 'bundle.js',
-    publicPath: '/',
+    path: '/',
+    filename: 'index.js',
   },
   devServer: {
     inline: true,
@@ -23,41 +15,6 @@ var config = {
     disableHostCheck: true,
     historyApiFallback: true,
   },
-  plugins: [
-    new webpack.optimize.MinChunkSizePlugin({
-      minChunkSize: 10000
-    }),
-    new HtmlWebpackPlugin({
-      template: '../index.html',
-      filename: '../dist/index.html',
-    }),
-    new ExtractTextPlugin({
-      filename: 'styles.css',
-      allChunks: true,
-    }),
-    new webpack.optimize.LimitChunkCountPlugin({
-      maxChunks: 15
-    }),
-    // new webpack.optimize.UglifyJsPlugin({
-    //   compress: {
-    //     hoist_funs: true,
-    //     sequences: true,
-    //     dead_code: true,
-    //     conditionals: true,
-    //     booleans: true,
-    //     unused: true,
-    //     if_return: true,
-    //     join_vars: true,
-    //     drop_console: false,
-    //     comparisons: true,
-    //     warnings: true,
-    //     loops: true,
-    //     drop_debugger: true,
-    //   },
-    // }),
-    // new OptimizeCssAssetsPlugin(),
-  ],
-  devtool: 'source-map',
   module: {
     loaders: [
       {
@@ -70,8 +27,8 @@ var config = {
         }
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        test: /\.s?css$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.(eot|woff|woff2|svg|ttf)([?]?.*)$/,
@@ -85,7 +42,7 @@ var config = {
   },
   resolve: {
     modules: [path.resolve(__dirname, './src'), 'node_modules', 'config'],
-    extensions: ['*', '.js', '.jsx', '.json', '.css' ],
+    extensions: ['*', '.js', '.jsx', '.json', '.scss'],
   }
 }
 module.exports = config;
