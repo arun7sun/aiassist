@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { loadState } from 'helpers/LocalStorage'
+import { NavLink } from 'react-router-dom'
+import Chatbot from 'components/Chatbot'
 
 import "./style";
 
@@ -57,44 +59,59 @@ class Header extends Component {
             <div className="section">
                 <nav className="navbar navbar-expand-lg ">
                     <div className="d-flex">
-                        <Link to="/dashboard" className="navbar-brand" ><img src="/images/Walmart_Logo1.png" /></Link>
-                        <button class="button-hide" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <NavLink to={"/dashboard"} className="navbar-brand" ><img src="/images/Walmart_Logo1.png" /></NavLink>
+                        <button className="button-hide" data-toggle="collapse" data-target="#collapsibleNavbar">
                             <i className="fas fa-bars"></i>
                         </button>
-                        <button class="navbar-toggler collapsed" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <button className="navbar-toggler collapsed" data-toggle="collapse" data-target="#collapsibleNavbar">
                             <i className="fas fa-bars"></i>
                         </button>
                     </div>
 
 
                     <form action="submit" className="form-action">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text icon" data-toggle="modal" data-target="#search-box"><i className="fas fa-book"></i></span>
+                        <div className="input-group">
+                            <div className="input-group-prepend">
+                                <span className="input-group-text icon" data-toggle="modal" data-target="#search-box"><i className="fas fa-book"></i></span>
                             </div>
-                            <input type="text" data-toggle="modal" data-target="#search-box" class="form-control" placeholder="Type Your Query...." />
-                            <div class="input-group-append">
-                                <span class="input-group-text icon" data-toggle="modal" data-target="#search-box"><i className="fas fa-microphone"></i></span>
-                                <span class="input-group-text search-icon" data-toggle="modal" data-target="#search-box"><i className="fas fa-search"></i></span>
+                            <input type="text" data-toggle="modal" data-target="#search-box" className="form-control" placeholder="Type Your Query...." />
+                            <div className="input-group-append">
+                                <span className="input-group-text icon" data-toggle="modal" data-target="#search-box"><i className="fas fa-microphone"></i></span>
+                                <span className="input-group-text search-icon" data-toggle="modal" data-target="#search-box"><i className="fas fa-search"></i></span>
                             </div>
                         </div>
                     </form>
 
 
-                    <div class="navbar-nav d-flex ml-auto">
-                        
-                        <li class="nav-item  dropdown dropdown-toggle" data-toggle="dropdown">
-                            <button class="nav-link btn btn-default" type="button"><img src="images/icon.png" /> Hello <i class="fa fa-caret-down"></i></button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Logout <i class="fa fa-sign-out"></i></a>
+                    <div className="navbar-nav d-flex ml-auto">
+
+                        <li className="nav-item  dropdown dropdown-toggle" data-toggle="dropdown">
+                            <button className="nav-link btn btn-default" type="button"><img src="images/icon.png" /> Hello <i className="fa fa-caret-down"></i></button>
+                            <div className="dropdown-menu">
+                                <NavLink className="dropdown-item" to={"/logout"}>Logout <i className="fa fa-sign-out"></i></NavLink>
                             </div>
                         </li>
+                    </div>
+
+                    <div class="modal fade" data-backdrop="static" data-keyboard="false" id="search-box">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    {/* <h4 class="modal-title">AI Assist</h4> */}
+                                    <button type="button" class="close" data-dismiss="modal"><i class="fas fa-caret-down"></i></button>
+                                    <div class="rcw-conversation-container">
+                                        <Chatbot />
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
 
 
                 </nav>
 
-                <div class="navbar-collapse collapse" id="collapsibleNavbar">
+                <div className="navbar-collapse collapse" id="collapsibleNavbar">
                     <b>Hello</b>
                 </div>
             </div>
