@@ -54,37 +54,36 @@ class Header extends Component {
     }
     render = () => {
         return (
-            <div className="section">
-                <nav className="navbar navbar-expand-lg ">
-                    <div className="d-flex">
-                        <Link to="/dashboard" className="navbar-brand" ><img src="/images/Walmart_Logo1.png" /></Link>
-                        <button class="button-hide" data-toggle="collapse" data-target="#collapsibleNavbar">
-                            <i className="fas fa-bars"></i>
+            <div class="section">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="d-flex logo-area">
+                        <button class="navbar-toggler icon collapsed" data-toggle="collapse" data-target="#collapsibleNavbar">
+                            <i class="fas fa-bars"></i>
                         </button>
-                        <button class="navbar-toggler collapsed" data-toggle="collapse" data-target="#collapsibleNavbar">
-                            <i className="fas fa-bars"></i>
+                        <Link to=""><img class="navbar-brand main-logo" src="images/Walmart_Logo1.png" /></Link>
+                        <Link to=""><img class="spark-logo" src="images/Walmart_logo_spark.png" /></Link>
+                        <button class="button-hide" data-toggle="collapse" data-target="#collapsibleNavbar">
+                            <i class="fas fa-bars"></i>
                         </button>
                     </div>
 
-
-                    <form action="submit" className="form-action">
+                    <form action="submit" class="form-action">
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <span class="input-group-text icon" data-toggle="modal" data-target="#search-box"><i className="fas fa-book"></i></span>
+                                <span class="input-group-text icon" data-toggle="modal" data-target="#search-box"><i class="fas fa-book"></i></span>
                             </div>
                             <input type="text" data-toggle="modal" data-target="#search-box" class="form-control" placeholder="Type Your Query...." />
                             <div class="input-group-append">
-                                <span class="input-group-text icon" data-toggle="modal" data-target="#search-box"><i className="fas fa-microphone"></i></span>
-                                <span class="input-group-text search-icon" data-toggle="modal" data-target="#search-box"><i className="fas fa-search"></i></span>
+                                <span class="input-group-text icon" data-toggle="modal" data-target="#search-box"><i class="fas fa-microphone"></i></span>
+                                <span class="input-group-text icon" data-toggle="modal" data-target="#search-box"><i class="fas fa-search"></i></span>
                             </div>
                         </div>
                     </form>
 
 
                     <div class="navbar-nav d-flex ml-auto">
-                        
                         <li class="nav-item  dropdown dropdown-toggle" data-toggle="dropdown">
-                            <button class="nav-link btn btn-default" type="button"><img src="images/icon.png" /> Hello <i class="fa fa-caret-down"></i></button>
+                            <button class="nav-link btn btn-default" type="button"><img src="images/icon.png" /> <span>Hello</span> <i class="fa fa-caret-down"></i></button>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Logout <i class="fa fa-sign-out"></i></a>
                             </div>
