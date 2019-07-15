@@ -2,7 +2,7 @@ body {
     background-color: white;
 }
 
-.section{
+.section {
     width: 100%;
 }
 
@@ -11,20 +11,22 @@ body {
     .modal-dialog {
         top: 0;
         max-width: 45%;
-        margin: 10px auto 0;
+        width: 100%;
+        margin: 9px auto 0;
         position: fixed;
-        right: 28%;
+        right: 25.5%;
     }
 
     .modal-body {
-        height: 90vh;
-        overflow: auto;
+        // height: 90vh;
+        padding: 0;
     }
 
     .modal-header {
         background-color: #3b7fc4;
         color: white;
-        padding: 5px 10px;
+        min-height: 40px;
+        padding: 0 10px;
         border-radius: 0;
         font-size: 18px;
 
@@ -48,7 +50,7 @@ body {
         width: 100%;
     }
 
-   
+
 }
 
 
