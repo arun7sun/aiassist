@@ -1,7 +1,7 @@
 /**Styles for Chat widget**/
 .rcw-conversation-container .rcw-header {
     background-color: #004c91;
-    border-radius: 10px 10px 0 0;
+    border-radius: 0px 0px 0 0;
     color: #fff;
     display: -ms-flexbox;
     display: flex;
