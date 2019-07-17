@@ -120,6 +120,7 @@ class Header extends Component {
           </form>
 
           <div class="navbar-nav d-flex ml-auto">
+            <li><i data-toggle="modal" data-target="#search-box" className="fas fa-search"/></li>
             <li
               class="nav-item  dropdown dropdown-toggle"
               data-toggle="dropdown"

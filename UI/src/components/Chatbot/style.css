@@ -96,7 +96,7 @@
 
 @media screen and (max-width: 800px) {
     .rcw-messages-container {
-        height: 50vh;
+        height: 80vh;
         max-height: none
     }
 }
@@ -343,6 +343,7 @@
 .rcw-widget-container button img {
     width: 18px !important;
     height: 18px !important;
+    margin-top: -3px;
 }
 
 .rcw-opened {

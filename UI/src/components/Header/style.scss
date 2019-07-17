@@ -12,7 +12,7 @@
     min-width: 14%;
   }
 
-  .spark-logo{
+  .spark-logo {
     display: none;
   }
 
@@ -44,7 +44,7 @@
   }
 
   .form-action {
-    width: 75%;
+    width: 100%;
 
     .input-group {
       margin: 0 auto;
@@ -116,7 +116,6 @@
   .navbar {
     height: 48px !important;
 
-    .fa-caret-down,
     .main-logo {
       display: none;
     }
@@ -133,6 +132,8 @@
 
   .fa-search {
     margin-top: 7px;
+    margin-right: 7px;
+    cursor: pointer;
   }
 
   .navbar {
@@ -209,6 +210,7 @@
 
     .input-group {
       float: right;
+      display: none;
       width: auto !important;
     }
 
@@ -220,10 +222,11 @@
   .modal {
     .modal-dialog {
       top: -6px;
-      max-width: 72% !important;
-      margin: 7px auto 0 !important;
+      max-width: 100% !important;
+      margin: 0px auto 0 !important;
       position: fixed !important;
-      right: 11% !important;
+      right: 0 !important;
+      height: 100%;
     }
 
     .modal-title {
@@ -247,10 +250,17 @@
     }
   }
 
+  .fa-search {
+    margin-top: 7px;
+    margin-right: 7px;
+    cursor: pointer;
+  }
+
   .input-group-text {
     padding: 0px 8px;
   }
-  .input-group-text .fa-search{
+
+  .input-group-text .fa-search {
     margin-top: 7px;
   }
 
@@ -324,6 +334,7 @@
 
     .input-group {
       float: right;
+      display: none;
       width: auto !important;
     }
 
@@ -347,11 +358,24 @@
     }
   }
 }
-
-@media (min-width: 768px) and (max-width: 1140px) {
+@media (min-width: 766px) and (max-width: 770px) {
+  .spark-logo{
+    display: block !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1160px) {
   .navbar .form-action {
     margin: auto;
     width: auto;
+  }
+  .navbar-expand-lg .navbar-nav .nav-link{
+    padding-left: 0;
+  }
+
+  .fa-search {
+    margin-top: 7px;
+    margin-right: 7px;
+    cursor: pointer;
   }
 
   .input-group-text {
@@ -423,6 +447,7 @@
     .input-group {
       float: right;
       width: auto !important;
+      display: none;
     }
 
     .search-icon {
