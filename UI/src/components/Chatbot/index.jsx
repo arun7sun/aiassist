@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Widget, addResponseMessage } from "react-chat-widget";
-import Launcher from "react-chat-widget";
+import Launcher from "../Launcher"
 import axios from "axios";
 import apiPaths from "../../apiPaths";
 
@@ -12,8 +12,7 @@ const mapStateToProps = (state, ownProps) => ({});
 const mapDispatchToProps = dispatch => ({});
 
 class Chatbot extends Component {
-  state = {};
-
+  state = {}
   componentDidMount = () => {
     addResponseMessage("Hi User!");
   };
@@ -26,6 +25,7 @@ class Chatbot extends Component {
     });
   };
 
+
   componentWillReceiveProps = () => {};
 
   render = () => {
@@ -34,7 +34,9 @@ class Chatbot extends Component {
         <Widget
           handleNewUserMessage={this.handleNewUserMessage}
           title="AI Assist"
+          showCloseButton = {false}
           subtitle={false}
+          // launcher={handleToggle => <Launcher toggle={handleToggle} />}
           senderPlaceHolder="Type your query..."
         />
       </div>
