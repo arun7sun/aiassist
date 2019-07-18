@@ -196,7 +196,8 @@
 }
 
 .rcw-launcher .rcw-badge {
-    position: fixed;
+    display: none;
+    /* position: fixed;
     top: -10px;
     right: -5px;
     background-color: red;
@@ -205,11 +206,12 @@
     height: 25px;
     text-align: center;
     line-height: 25px;
-    border-radius: 50%
+    border-radius: 50% */
 }
 
 .rcw-launcher {
-    -webkit-animation-delay: 0;
+    display: none;
+    /* -webkit-animation-delay: 0;
     -webkit-animation-duration: .5s;
     -webkit-animation-name: c;
     -webkit-animation-fill-mode: forwards;
@@ -230,13 +232,13 @@
     width: 30px;
     position: absolute;
     right: 5px;
-    top: -5px;
+    top: -5px; */
 }
 
-.rcw-launcher:focus {
+/* .rcw-launcher:focus {
     outline: none
-}
-
+} */
+/* 
 .rcw-open-launcher {
     -webkit-animation-delay: 0;
     -webkit-animation-duration: .5s;
@@ -266,7 +268,7 @@
     animation-duration: .5s;
     animation-name: a;
     animation-fill-mode: forwards
-}
+} */
 
 @media screen and (max-width: 800px) {
     .rcw-launcher {

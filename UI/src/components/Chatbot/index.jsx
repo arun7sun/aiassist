@@ -14,12 +14,12 @@ const mapDispatchToProps = dispatch => ({});
 class Chatbot extends Component {
   state = {}
   componentDidMount = () => {
-    addResponseMessage("Hi User!");
+    addResponseMessage('Hi User!');
   };
 
   componentWillMount = () => {};
   handleNewUserMessage = newMessage => {
-    // sent the message throught the backend API
+    // sent the message through the backend API
     axios.get(`http://localhost:7070${apiPaths.chat}`).then(res => {
       addResponseMessage(res.data.data);
     });
@@ -34,6 +34,7 @@ class Chatbot extends Component {
         <Widget
           handleNewUserMessage={this.handleNewUserMessage}
           title="AI Assist"
+          toggleWidget
           showCloseButton = {false}
           subtitle={false}
           // launcher={handleToggle => <Launcher toggle={handleToggle} />}

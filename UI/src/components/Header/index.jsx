@@ -32,7 +32,7 @@ class Header extends Component {
     // this.props.login(loadState().session.token,true)
   };
 
-  componentWillReceiveProps = nextProps => {};
+  componentWillReceiveProps = nextProps => { };
   handleProfileClick = () => {
     if (!this.state.profileClicked) {
       document.addEventListener("click", this.handleProfileOutsideClick, false);
@@ -120,7 +120,11 @@ class Header extends Component {
           </form>
 
           <div class="navbar-nav d-flex ml-auto">
-            <li><i data-toggle="modal" data-target="#search-box" className="fas fa-search"/></li>
+
+            <li>
+              <i data-toggle="modal" data-target="#search-box" className="fas fa-search" />
+              
+            </li>
             <li
               class="nav-item  dropdown dropdown-toggle"
               data-toggle="dropdown"
