@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Widget, addResponseMessage } from "react-chat-widget";
-import Launcher from "../Launcher"
+import { Widget, toggleWidget, addResponseMessage, Launcher } from "react-chat-widget";
 import axios from "axios";
 import apiPaths from "../../apiPaths";
 
-import "./style.css";
+// import "./style.css";
 
 const mapStateToProps = (state, ownProps) => ({});
 
@@ -13,11 +12,15 @@ const mapDispatchToProps = dispatch => ({});
 
 class Chatbot extends Component {
   state = {}
+
   componentDidMount = () => {
-    addResponseMessage('Hi User!');
+    addResponseMessage("Hi User!");
+    toggleWidget();
   };
 
-  componentWillMount = () => {};
+  componentWillUnmount() {
+    toggleWidget();
+    }
   handleNewUserMessage = newMessage => {
     // sent the message through the backend API
     axios.get(`http://localhost:7070${apiPaths.chat}`).then(res => {
@@ -28,18 +31,46 @@ class Chatbot extends Component {
 
   componentWillReceiveProps = () => {};
 
+  handleProfileClick = () => {
+    if (!this.state.profileClicked) {
+      document.addEventListener("click", this.handleProfileOutsideClick, false);
+    } else {
+      document.removeEventListener(
+        "click",
+        this.handleProfileOutsideClick,
+        false
+      );
+    }
+
+    this.setState(prevState => ({
+      profileClicked: !prevState.profileClicked
+    }));
+  };
+
   render = () => {
     return (
       <div className="chatBot">
-        <Widget
-          handleNewUserMessage={this.handleNewUserMessage}
-          title="AI Assist"
-          toggleWidget
-          showCloseButton = {false}
-          subtitle={false}
-          // launcher={handleToggle => <Launcher toggle={handleToggle} />}
-          senderPlaceHolder="Type your query..."
-        />
+          <div class="modal fade" data-keyboard="false" id="search-box">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                   <h4 class="modal-title">AI Assist</h4>
+                   <button type="button" class="close" data-dismiss="modal"><i class="fas fa-caret-down"></i></button>
+                </div>
+                <div class="modal-body">
+                  <Widget
+                    handleNewUserMessage={this.handleNewUserMessage}
+                    title={false}
+                    showCloseButton={true}
+                    subtitle={false}
+                    launcher = {false}
+                    fullScreenMode={false}
+                    senderPlaceHolder="Type your query..."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
     );
   };

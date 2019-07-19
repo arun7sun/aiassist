@@ -1,13 +1,14 @@
 /**Styles for Chat widget**/
 .rcw-conversation-container .rcw-header {
-    background-color: #004c91;
+    display: none;
+    /* background-color: #3B7FC4;
     border-radius: 0px 0px 0 0;
     color: #fff;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 6px 10px;
+    padding: 6px 10px; */
 }
 
 .rcw-conversation-container .rcw-title {
@@ -196,8 +197,8 @@
 }
 
 .rcw-launcher .rcw-badge {
-    display: none;
-    /* position: fixed;
+    /* display: none; */
+    position: fixed;
     top: -10px;
     right: -5px;
     background-color: red;
@@ -206,12 +207,12 @@
     height: 25px;
     text-align: center;
     line-height: 25px;
-    border-radius: 50% */
+    border-radius: 50%
 }
 
 .rcw-launcher {
     display: none;
-    /* -webkit-animation-delay: 0;
+    -webkit-animation-delay: 0;
     -webkit-animation-duration: .5s;
     -webkit-animation-name: c;
     -webkit-animation-fill-mode: forwards;
@@ -232,13 +233,13 @@
     width: 30px;
     position: absolute;
     right: 5px;
-    top: -5px; */
+    top: -5px;
 }
 
-/* .rcw-launcher:focus {
+.rcw-launcher:focus {
     outline: none
-} */
-/* 
+}
+
 .rcw-open-launcher {
     -webkit-animation-delay: 0;
     -webkit-animation-duration: .5s;
@@ -268,18 +269,18 @@
     animation-duration: .5s;
     animation-name: a;
     animation-fill-mode: forwards
-} */
+}
 
 @media screen and (max-width: 800px) {
-    .rcw-launcher {
+    .rcw-launcher  {
         bottom: 0;
         margin: 20px;
         position: fixed;
         right: 40px;
     }
-
+     
     .rcw-hide-sm {
-        display: none
+        display: none;
     }
 }
 
@@ -399,7 +400,7 @@
 }
 
 .rcw-response {
-    background-color: #004c91
+    background-color: #3B7FC4;
 }
 
 .rcw-message {

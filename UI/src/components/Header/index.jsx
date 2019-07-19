@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { loadState } from "helpers/LocalStorage";
 import { NavLink } from "react-router-dom";
 import Chatbot from "components/Chatbot";
+import { Widget, toggleWidget, addResponseMessage, Launcher } from "react-chat-widget";
 
 import "./style";
 import "../Chatbot/style.css";
@@ -28,9 +29,15 @@ class Header extends Component {
   };
 
   componentWillMount = () => {
-    // this.props.getHeader()
-    // this.props.login(loadState().session.token,true)
   };
+  // componentDidMount = () => {
+  //   addResponseMessage("Hi User!");
+  //   toggleWidget();
+  // };
+
+  // componentWillUnmount() {
+  //   toggleWidget();
+  //   }
 
   componentWillReceiveProps = nextProps => { };
   handleProfileClick = () => {
@@ -140,20 +147,30 @@ class Header extends Component {
               </div>
             </li>
           </div>
-
-          <div class="modal fade" data-keyboard="false" id="search-box">
+          <Chatbot/>
+          {/* <div class="modal fade" data-keyboard="false" id="search-box">
             <div class="modal-dialog">
               <div class="modal-content">
-                {/*<div class="modal-header">
+                <div class="modal-header">
                    <h4 class="modal-title">AI Assist</h4>
                    <button type="button" class="close" data-dismiss="modal"><i class="fas fa-caret-down"></i></button>
-                </div>*/}
+                </div>
                 <div class="modal-body">
-                  <Chatbot />
+                  <Widget
+                    handleNewUserMessage={this.handleNewUserMessage}
+                    title={false}
+                    showCloseButton={true}
+                    subtitle={false}
+                    launcher = {false}
+                    fullScreenMode={false}
+                    senderPlaceHolder="Type your query..."
+                  />
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
+
+          
         </nav>
 
         <div className="navbar-collapse collapse" id="collapsibleNavbar">
