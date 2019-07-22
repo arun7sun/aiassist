@@ -4,8 +4,6 @@ import { Switch, Route } from 'react-router-dom';
 import "./style";
 
 import Header from 'components/Header';
-// import Luis from 'components/Luis';
-
 import Dashboard from 'scenes';
 
 
@@ -13,6 +11,7 @@ const Root = (props) => {
     return (
         <div className="section">
             <Header />
+            {/* <Feedback/> */}
             {/* <header>
                 <nav className="navbar navbar-expand-md  navbar-dark fixed-top">
                     <a className="navbar-brand" href="#"><img src="images/Walmart_Logo.png" /> Giving Dashboard</a>

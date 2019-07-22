@@ -1,6 +1,10 @@
 .section {
   width: 100%;
 }
+.modal-title{
+width: 100%;
+    text-align: center;
+}
 
 .navbar {
   background-color: #004c91;
@@ -232,6 +236,7 @@
     .modal-title {
       font-size: 18px;
       margin: 5px 0;
+      
     }
   }
 }
@@ -355,6 +360,7 @@
     .modal-title {
       font-size: 18px;
       margin: 5px 0;
+      
     }
   }
 }
@@ -363,7 +369,7 @@
     display: block !important;
   }
 }
-@media (min-width: 768px) and (max-width: 1160px) {
+@media (min-width: 768px) and (max-width: 1300px) {
   .navbar .form-action {
     margin: auto;
     width: auto;

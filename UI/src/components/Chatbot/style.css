@@ -385,10 +385,12 @@
 }
 
 .rcw-client {
-    background-color: gainsboro;
+    /* background-color: gainsboro;
     margin-left: auto;
     font-weight: 500;
-    color: black;
+    color: black; */
+    background-color: #3B7FC4;
+    margin-left: auto;
 }
 
 .rcw-client,
@@ -400,7 +402,13 @@
 }
 
 .rcw-response {
-    background-color: #3B7FC4;
+    /* background-color: #3B7FC4; */
+    background-color: gainsboro;
+    /* margin-left: auto; */
+    font-weight: 400;
+    font-size: 13px;
+    color: black;
+
 }
 
 .rcw-message {
@@ -419,19 +427,22 @@
 }
 
 .rcw-snippet {
-    background-color: #f4f7f9;
+    background-color: gainsboro;
     border-radius: 10px;
     padding: 15px;
-    max-width: 215px;
+    /* max-width: 215px; */
     text-align: left
 }
 
 .rcw-snippet-title {
-    margin: 0
+    margin: 0;
+    color : black;
+    font-weight: 400;
+    font-size: 13.5px; 
 }
 
 .rcw-snippet-details {
-    border-left: 2px solid #35e65d;
+    border-left: 2px solid teal;
     margin-top: 5px;
     padding-left: 10px
 }
@@ -439,3 +450,57 @@
 .rcw-link {
     font-size: 12px
 }
+
+.feedback {
+    width : 100%;
+  }
+    .close {
+    
+      opacity: 1;
+          color: white;
+          font-size: 22px;
+          padding: 5px 7px;
+          border-radius: 50%;
+          opacity: 1;
+          border: 1px solid white;
+          margin-top : 10px;
+      
+    }
+  
+  
+  
+  button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px 30px 0px 30px;
+    /* padding-right: 10px; */
+    
+    
+  }
+  .good{
+    background-color: gainsboro; /* Green */
+    /* .active{
+        background-color: #4CAF50;
+    } */
+  }
+  
+  .good i{
+    font-size:48px;
+    color : #2a662c;
+  }
+  .bad{
+    background-color: gainsboro; /* Green */
+    /* .active{
+        background-color: #E8475A;
+    } */
+  }
+  .bad i
+  {
+    font-size:48px;
+    color : #a61929;
+  }

@@ -126,36 +126,36 @@ class Header extends Component {
             </div>
           </form>
 
-          <div class="navbar-nav d-flex ml-auto">
+          <div className="navbar-nav d-flex ml-auto">
 
             <li>
               <i data-toggle="modal" data-target="#search-box" className="fas fa-search" />
               
             </li>
             <li
-              class="nav-item  dropdown dropdown-toggle"
+              className="nav-item  dropdown dropdown-toggle"
               data-toggle="dropdown"
             >
-              <button class="nav-link btn btn-default" type="button">
+              <button className="nav-link btn btn-default" type="button">
                 <img src="images/icon.png" /> <span>Hello</span>{" "}
-                <i class="fa fa-caret-down" />
+                <i className="fa fa-caret-down" />
               </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">
-                  Logout <i class="fa fa-sign-out" />
+              <div className="dropdown-menu">
+                <a className="dropdown-item" href="#">
+                  Logout <i className="fa fa-sign-out" />
                 </a>
               </div>
             </li>
           </div>
           <Chatbot/>
-          {/* <div class="modal fade" data-keyboard="false" id="search-box">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                   <h4 class="modal-title">AI Assist</h4>
-                   <button type="button" class="close" data-dismiss="modal"><i class="fas fa-caret-down"></i></button>
+          {/* <div className="modal fade" data-keyboard="false" id="search-box">
+            <div className="modal-dialog">
+              <div className="modal-content">
+                <div className="modal-header">
+                   <h4 className="modal-title">AI Assist</h4>
+                   <button type="button" className="close" data-dismiss="modal"><i className="fas fa-caret-down"></i></button>
                 </div>
-                <div class="modal-body">
+                <div className="modal-body">
                   <Widget
                     handleNewUserMessage={this.handleNewUserMessage}
                     title={false}
