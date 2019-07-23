@@ -1,4 +1,24 @@
 /**Styles for Chat widget**/
+
+.feedback-button i{
+    color : white;
+}
+.feedback-button .negative {
+    float : right;
+    width : 40px;
+    height : 40px;
+    border : 0;
+    border-radius : 20px;
+    background-color: #D1254B; 
+}
+
+.feedback-button .positive {
+    width : 40px;
+    height : 40px;
+    border : 0;
+    border-radius : 50px;
+    background-color: #2FA352;
+}
 .rcw-conversation-container .rcw-header {
     display: none;
     /* background-color: #3B7FC4;
@@ -395,7 +415,7 @@
 
 .rcw-client,
 .rcw-response {
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 10px 15px;
     max-width: 80%;
     text-align: left
@@ -428,7 +448,7 @@
 
 .rcw-snippet {
     background-color: gainsboro;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 15px;
     /* max-width: 215px; */
     text-align: left
@@ -451,10 +471,10 @@
     font-size: 12px
 }
 
-.feedback {
+/* .feedback {
     width : 100%;
-  }
-    .close {
+  } */
+    /* .close {
     
       opacity: 1;
           color: white;
@@ -465,11 +485,11 @@
           border: 1px solid white;
           margin-top : 10px;
       
-    }
+    } */
   
   
   
-  button {
+  /* button {
     border: none;
     color: white;
     padding: 15px 32px;
@@ -477,16 +497,16 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 0px 30px 0px 30px;
-    /* padding-right: 10px; */
+    margin: 0px 7px;
+    padding-right: 10px; 
     
     
-  }
+   } 
   .good{
-    background-color: gainsboro; /* Green */
-    /* .active{
+    background-color: gainsboro; Green
+    .active{
         background-color: #4CAF50;
-    } */
+    }
   }
   
   .good i{
@@ -494,13 +514,13 @@
     color : #2a662c;
   }
   .bad{
-    background-color: gainsboro; /* Green */
-    /* .active{
+    background-color: gainsboro; 
+    .active{
         background-color: #E8475A;
-    } */
+    }
   }
   .bad i
   {
     font-size:48px;
     color : #a61929;
-  }
+  } */

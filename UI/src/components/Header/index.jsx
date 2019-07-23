@@ -68,7 +68,7 @@ class Header extends Component {
         <nav className="navbar navbar-expand-lg ">
           <div className="d-flex">
             <NavLink to={"/"} className="main-logo">
-              <img src="/images/Walmart_Logo1.png" />
+              <img className="mainlogo" src="/images/logowhite.svg" />
             </NavLink>
             <NavLink to={"/"} className="spark-logo">
               <img src="/images/Walmart_logo_spark.png" />
@@ -105,7 +105,7 @@ class Header extends Component {
                 data-toggle="modal"
                 data-target="#search-box"
                 className="form-control"
-                placeholder="Type Your Query...."
+                placeholder="Type Your Query..."
               />
               <div className="input-group-append">
                 <span
@@ -130,15 +130,16 @@ class Header extends Component {
 
             <li>
               <i data-toggle="modal" data-target="#search-box" className="fas fa-search" />
-              
+
             </li>
             <li
               className="nav-item  dropdown dropdown-toggle"
               data-toggle="dropdown"
             >
               <button className="nav-link btn btn-default" type="button">
-                <img src="images/icon.png" /> <span>Hello</span>{" "}
-                <i className="fa fa-caret-down" />
+                <img src="images/icon.png" />
+                  <span>Hello</span>{" "}
+                  <i className="fa fa-caret-down" />
               </button>
               <div className="dropdown-menu">
                 <a className="dropdown-item" href="#">
@@ -147,7 +148,7 @@ class Header extends Component {
               </div>
             </li>
           </div>
-          <Chatbot/>
+          <Chatbot />
           {/* <div className="modal fade" data-keyboard="false" id="search-box">
             <div className="modal-dialog">
               <div className="modal-content">
@@ -170,7 +171,7 @@ class Header extends Component {
             </div>
           </div> */}
 
-          
+
         </nav>
 
         <div className="navbar-collapse collapse" id="collapsibleNavbar">

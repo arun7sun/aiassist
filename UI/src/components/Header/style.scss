@@ -4,6 +4,7 @@
 .modal-title{
 width: 100%;
     text-align: center;
+    border-radius: 0.3rem;
 }
 
 .navbar {
@@ -11,6 +12,17 @@ width: 100%;
   color: white;
   padding: 0;
   height: 50px;
+
+  button span{
+   line-height: 4;
+   margin-left: 5px;
+  }
+
+  .mainlogo{
+    width: 150px;
+    height: 50px;
+    margin:0 10px;
+  }
 
   .logo-area {
     min-width: 14%;
@@ -52,7 +64,13 @@ width: 100%;
 
     .input-group {
       margin: 0 auto;
-      width: 48%;
+      width: 68%;
+      i{
+        opacity : 0.4;
+      }
+      ::placeholder{
+        opacity: 0.3;
+      }
     }
   }
 
@@ -133,6 +151,8 @@ width: 100%;
   .input-group-text {
     padding: 0px 6px;
   }
+
+  
 
   .fa-search {
     margin-top: 7px;
@@ -255,6 +275,10 @@ width: 100%;
     }
   }
 
+  .modal-header .close{
+    margin: 0px !important;
+  }
+ 
   .fa-search {
     margin-top: 7px;
     margin-right: 7px;
@@ -367,6 +391,9 @@ width: 100%;
 @media (min-width: 766px) and (max-width: 770px) {
   .spark-logo{
     display: block !important;
+  }
+  .modal-header .close{
+    margin: 4px !important;
   }
 }
 @media (min-width: 768px) and (max-width: 1300px) {
