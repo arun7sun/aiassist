@@ -19,14 +19,22 @@ const mapDispatchToProps = dispatch => ({});
 
 const customStyles = {
   content: {
-    top: "50%",
-    left: "50%",
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
     right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    backgroundColor: "#004c91",
-    transform: "translate(-50%, -50%)",
-    color : "white"
+    bottom: 'auto',
+    border: '1px solid rgb(204, 204, 204)',
+    background: 'rgb(0, 76, 145)',
+    overflow: 'auto',
+    borderRadius: '4px',
+    outline: 'none',
+    padding: '22px',
+    minWidth: '23% !important',
+    marginRight: '-50%',
+    transform: 'translate(-51%, -50%)',
+    color: 'white',
+    fontFamily: 'Helvettica',
   }
 };
 
@@ -141,9 +149,21 @@ class Chatbot extends Component {
             contentLabel="Feedback Modal"
             ariaHideApp={false}
           >
-            <h2 ref={subtitle => (this.subtitle = subtitle)}>
-              How do you think I did today?
-            </h2>
+            <div className="d-flex">
+              <h2
+                className="title"
+                ref={subtitle => (this.subtitle = subtitle)}
+              >
+                How do you think I did today?
+              </h2>
+              <button
+                onClick={this.closeModal}
+                className="close"
+                data-dismiss="modal"
+              >
+                <i className="fa fa-window-close " />
+              </button>
+            </div>
             <div className="feedback-button">
               <button className="positive" onClick={this.good}>
                 <i className="fa fa-thumbs-up" />
@@ -152,13 +172,6 @@ class Chatbot extends Component {
                 <i className="fa fa-thumbs-down" />
               </button>
             </div>
-            <button
-              onClick={this.closeModal}
-              className="close"
-              data-dismiss="modal"
-            >
-              close
-            </button>
           </Modal>
         </div>
       </div>
