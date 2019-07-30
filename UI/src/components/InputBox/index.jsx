@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import { loadState } from "helpers/LocalStorage";
 import { NavLink } from "react-router-dom";
 
+import "./style";
+
 const mapStateToProps = (state, ownProps) => ({
 });
 

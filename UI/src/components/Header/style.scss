@@ -1,11 +1,6 @@
 .section {
   width: 100%;
 }
-.modal-title {
-  width: 100%;
-  text-align: center;
-  border-radius: 0.3rem;
-}
 
 .navbar {
   background-color: #004c91;
@@ -259,6 +254,9 @@
   .navbar {
     height: 50px !important;
     flex-wrap: nowrap;
+    li .fa-search{
+      display: none;
+    }
 
     .main-logo {
       display: none;
@@ -365,7 +363,7 @@
     .modal-dialog {
       top: -6px;
       max-width: 69% !important;
-      margin: 10px auto 0 !important;
+      margin: 15px auto 0 !important;
       position: fixed !important;
       right: 14% !important;
     }
@@ -388,9 +386,12 @@
     .input-group-text {
       padding: 0px 8px !important;
     }
+    li .fa-search{
+      display: none;
+    }
     .modal{
       .modal-dialog{
-        padding: 0 19% !important;
+        padding:0 15.5% 0 21% !important
       }
     }
   }
@@ -401,15 +402,15 @@
     padding-left: 0;
   }
 
-  
-  
-
   .navbar {
     flex-wrap: nowrap;
     .form-action {
       margin: auto;
       width: 100%;
       padding: 0 21% 0 11%;
+    }
+    li .fa-search{
+      display: none;
     }
     .input-group {
       width: 100% !important;
@@ -432,7 +433,7 @@
         margin: 10px auto 0 !important;
         position: fixed !important;
         right: 0 !important;
-        padding: 0 21% 0 26.8%;
+        padding:0 19% 0 26.8%;
       }
 
       .modal-title {

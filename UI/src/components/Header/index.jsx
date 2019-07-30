@@ -6,12 +6,6 @@ import { NavLink } from "react-router-dom";
 import Chatbot from "components/Chatbot";
 import InputBox from "components/InputBox";
 
-import {
-  Widget,
-  toggleWidget,
-  addResponseMessage,
-  Launcher
-} from "react-chat-widget";
 
 import "./style";
 import "../Chatbot/style.css";
@@ -31,6 +25,10 @@ const mapDispatchToProps = dispatch => ({
 });
 
 class Header extends Component {
+  handleNewUserMessage = newMessage => {
+    console.log(`New message incoming! ${newMessage}`);
+    // Now send the message throught the backend API
+  };
   state = {
     profileClicked: false
   };
@@ -95,7 +93,7 @@ class Header extends Component {
             </button>
           </div>
           <InputBox />
-          <Chatbot />
+          <Chatbot handleNewUserMessage={this.handleNewUserMessage} />
           <div className="navbar-nav d-flex ml-auto">
             <li>
               <i

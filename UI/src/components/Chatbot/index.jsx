@@ -6,7 +6,14 @@ import {
   addResponseMessage,
   addLinkSnippet,
   Launcher
-} from "react-chat-widget";
+} from "../ChatWidget";
+// import {
+//   Widget,
+//   toggleWidget,
+//   addResponseMessage,
+//   addLinkSnippet,
+//   Launcher
+// } from 'react-chat-widget';
 import axios from "axios";
 import apiPaths from "../../apiPaths";
 import Modal from "react-modal";
@@ -19,22 +26,22 @@ const mapDispatchToProps = dispatch => ({});
 
 const customStyles = {
   content: {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
+    position: "absolute",
+    top: "50%",
+    left: "50%",
     right: "auto",
-    bottom: 'auto',
-    border: '1px solid rgb(204, 204, 204)',
-    background: 'rgb(0, 76, 145)',
-    overflow: 'auto',
-    borderRadius: '4px',
-    outline: 'none',
-    padding: '22px',
-    minWidth: '23% !important',
-    marginRight: '-50%',
-    transform: 'translate(-51%, -50%)',
-    color: 'white',
-    fontFamily: 'Helvettica',
+    bottom: "auto",
+    border: "1px solid rgb(204, 204, 204)",
+    background: "rgb(0, 76, 145)",
+    overflow: "auto",
+    borderRadius: "4px",
+    outline: "none",
+    padding: "12px",
+    minWidth: "23% !important",
+    marginRight: "-50%",
+    transform: "translate(-51%, -50%)",
+    color: "white",
+    fontFamily: "Helvettica"
   }
 };
 
@@ -53,14 +60,14 @@ class Chatbot extends Component {
   }
   link = {
     title:
-      "Hi! I'm JARVIS, the associate's chat bot. How can I assist you with your People metrics today? It is the responsibility of the authorised user to safeguard the information contained in this application. In the event you are using a public computer, please be aware of your immediate surroundings.  Click below to know about Walmart Privacy Policy.",
+      "Welcome to the chat!  Don’t forget to comply with all Walmart standards, policies and procedures.  Don’t send personal information, such as medical diagnoses, social security numbers or financial account numbers, through the chat.",
     link:
       "https://corporate.walmart.com/privacy-security/walmart-privacy-policy"
   };
 
   componentDidMount = () => {
     toggleWidget();
-    addLinkSnippet(this.link);
+    addResponseMessage(this.link.title);
 
     // setQuickButtons(this.buttons);
   };
@@ -68,11 +75,27 @@ class Chatbot extends Component {
   componentWillUnmount() {
     toggleWidget();
   }
+
   handleNewUserMessage = newMessage => {
-    // sent the message through the backend API
-    axios.get(`http://localhost:7070${apiPaths.chat}`).then(res => {
-      addResponseMessage(res.data.data);
-    });
+    // sent the message throught the backend API
+    axios
+      .post(`http://localhost:7070${apiPaths.chat}`, {
+        userMessage: newMessage
+      })
+      .then(res => {
+        console.log("Response : ", res.data);
+        if (res.data.type === "result") {
+          addResponseMessage(this.manageResponse(res.data));
+        } else if (res.data.type === "return") {
+          addResponseMessage(res.data.message);
+        }
+      });
+  };
+
+  manageResponse = body => {
+    return body.message.length == 1
+      ? body.message[0]
+      : "Received Multiple data results - Yet to be handled";
   };
 
   componentWillReceiveProps = () => {};
@@ -131,6 +154,7 @@ class Chatbot extends Component {
                   handleNewUserMessage={this.handleNewUserMessage}
                   title={false}
                   showCloseButton={true}
+                  profileAvatar="images/react.svg"
                   subtitle={false}
                   launcher={false}
                   fullScreenMode={false}
@@ -156,13 +180,13 @@ class Chatbot extends Component {
               >
                 How do you think I did today?
               </h2>
-              <button
+              {/* <button
                 onClick={this.closeModal}
                 className="close"
                 data-dismiss="modal"
               >
                 <i className="fa fa-window-close " />
-              </button>
+              </button> */}
             </div>
             <div className="feedback-button">
               <button className="positive" onClick={this.good}>

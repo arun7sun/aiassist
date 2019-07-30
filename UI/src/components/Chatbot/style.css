@@ -6,21 +6,32 @@
     color : white;
 }
 .feedback-button .negative {
-    font-size: 60px !important;
-    padding: 5px 20px !important;
+    display: inline;
+    font-size: 35px !important;
+    padding: 5px 13px !important;
     border: 0 !important;
     margin-right: 10px;
     border-radius: 50px !important;
-    background-color: #D1254B; 
+    /* background-color: #D1254B;  */
+    background-color: #94BCE8;
+    
+    
 }
-
+.feedback-button .negative:active {
+    background-color: #D1254B;
+}
+.feedback-button .positive:active {
+    background-color: #2FA352;
+}
 .feedback-button .positive {
-    font-size: 60px !important;
-    padding: 5px 20px !important;
+    display: inline;
+    font-size: 35px !important;
+    padding: 5px 13px !important;
     border: 0 !important;
     margin: 0 5%;
     border-radius: 50px !important;
-    background-color: #2FA352 !important;
+    /* background-color: #2FA352 !important; */
+    background-color: #94BCE8;
 }
 
  .close .fa-window-close{
@@ -31,11 +42,12 @@
     right: 0;
     top: 0;
     color: white;
-    font-size: 35px;
+    font-size: 25px;
     margin-bottom: 50px;
 }
 .title{
     padding: 10px 0;
+    font-size: 18px;
 }
 .rcw-conversation-container .rcw-header {
     display: none;
@@ -148,7 +160,6 @@
     display: flex;
     background-color: #f4f7f9;
     height: 45px;
-    margin-bottom: 20px;
     padding: 5px;
     border-radius: 0 0 10px 10px
 }
@@ -379,7 +390,7 @@
 }
 
 .rcw-widget-container button {
-    padding: 0 !important;
+    padding: 0;
 }
 
 .rcw-widget-container button img {
