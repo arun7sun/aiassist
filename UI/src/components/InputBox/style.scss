@@ -14,6 +14,8 @@ body {
 }
 .modal img {
   width: 5% !important;
+  height : 5% !important;
+  margin-left: 5px;
 }
 
 .modal {
@@ -25,6 +27,9 @@ body {
     margin: 9px auto 0;
     position: fixed;
     right: 21.3%;
+    .modal-content {
+      border-radius : 0.6rem;
+    }
     
   }
 
@@ -51,9 +56,7 @@ body {
       i {
         opacity: 0.4;
       }
-      ::placeholder {
-        opacity: 0.3;
-      }
+      
     }
   }
 
@@ -62,7 +65,7 @@ body {
     color: white;
     min-height: 40px;
     padding: 0 10px;
-    border-radius: 0;
+    border-radius: 4px 4px 0px 0px;
     font-size: 18px;
 
     .close {
@@ -101,9 +104,13 @@ body {
     height: 30px;
     line-height: 1.5;
 
+
     &:focus {
       border: none !important;
       box-shadow: none !important;
+    }
+    ::placeholder {
+      opacity: 0.3;
     }
   }
 

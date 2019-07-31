@@ -24,7 +24,7 @@ class InputBox extends Component {
           <div className="input-group-prepend">
             <span
               className="input-group-text icon"
-              data-toggle="modal"
+              data-toggle="collapse"
               data-target="#search-box"
             >
               <i className="fas fa-book" />

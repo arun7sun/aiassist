@@ -9,13 +9,13 @@ import './style.scss';
 
 const Conversation = props =>
   <div className="rcw-conversation-container">
-    <Header
+    {/* <Header
       title={props.title}
       subtitle={props.subtitle}
       toggleChat={props.toggleChat}
       showCloseButton={props.showCloseButton}
       titleAvatar={props.titleAvatar}
-    />
+    /> */}
     <Messages
       profileAvatar={props.profileAvatar}
     />

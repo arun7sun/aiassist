@@ -3,14 +3,21 @@
 
 .rcw-send{
   display: flex;
+  padding: 4px;
+  border-radius: 0px 0 3px 3px;
+  margin-top : 1px;
   
   .fas{
     color: gray;
     opacity: 1;
     font-size: 16px;
     margin: 0 5px;
-    background-color: white !important;
   }
+
+  .fa-paper-plane {
+    margin: 0 15px !important;
+  }
+  
   button{
     background-color: whitesmoke !important;
     border:0;
@@ -42,6 +49,11 @@
   background-color: $grey-2;
   height: 30px;
   padding-left: 15px;
+  margin: 0 auto;
+  font-size: 13px;
+  font-weight: 590;
+  height: 30px;
+  line-height: 1.5;
 
   &:focus {
     outline: none;

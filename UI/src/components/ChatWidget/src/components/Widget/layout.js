@@ -28,14 +28,14 @@ const WidgetLayout = props => (
         titleAvatar={props.titleAvatar}
       />
     }
-    {props.customLauncher ?
+    {/* {props.customLauncher ?
       props.customLauncher(props.onToggleConversation) :
       !props.fullScreenMode &&
       <Launcher
         toggle={props.onToggleConversation}
         badge={props.badge}
       />
-    }
+    } */}
   </div>
 );
 

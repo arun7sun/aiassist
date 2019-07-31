@@ -152,12 +152,12 @@ class Chatbot extends Component {
               <div className="modal-body">
                 <Widget
                   handleNewUserMessage={this.handleNewUserMessage}
-                  title={false}
-                  showCloseButton={true}
-                  profileAvatar="images/react.svg"
-                  subtitle={false}
-                  launcher={false}
-                  fullScreenMode={false}
+                  // title={false}
+                  // showCloseButton={true}
+                  profileAvatar="images/chatbot-icon.png"
+                  // subtitle={false}
+                  // launcher={false}
+                  // fullScreenMode={false}
                   senderPlaceHolder="Type your query..."
                 />
               </div>
@@ -189,10 +189,10 @@ class Chatbot extends Component {
               </button> */}
             </div>
             <div className="feedback-button">
-              <button className="positive" onClick={this.good}>
+              <button className="positive" onClick={this.closeModal}>
                 <i className="fa fa-thumbs-up" />
               </button>
-              <button className="negative" onClick={this.bad}>
+              <button className="negative" onClick={this.closeModal }>
                 <i className="fa fa-thumbs-down" />
               </button>
             </div>

@@ -17,10 +17,10 @@
     
     
 }
-.feedback-button .negative:active {
+.feedback-button .negative:hover {
     background-color: #D1254B;
 }
-.feedback-button .positive:active {
+.feedback-button .positive:hover {
     background-color: #2FA352;
 }
 .feedback-button .positive {
@@ -430,6 +430,7 @@
 .rcw-message {
     margin: 10px;
     display: -ms-flexbox;
+    line-height: 1.3;
     /* display: flex */
 }
 
