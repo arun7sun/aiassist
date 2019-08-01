@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import blob from '../db/blob'
+// import blob from '../db/blob'
 import Util from './../utils';
 import moment from 'moment';
 
@@ -23,7 +23,7 @@ export default class Logger {
             })+",\n"
         }
         // console.log('ttttt',blogdata)
-        blob(blogdata);
+        // blob(blogdata);
         // let fileName = path.dirname(require.main.filename).replace('Node\\server', 'Node\\log\\').replace('Node/server', 'Node/log/') + 'log-' + new Date().getDate() + "-" + (new Date().getMonth() + 1) + '-' + new Date().getFullYear() + '.log';
         //     fs.appendFile(fileName,
         //         Util.dateFormater(Util.now(), "DD-MM-YYYY:HH:mm:ss").toString()+'\t'+

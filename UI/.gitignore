@@ -9,7 +9,10 @@
 package-lock.json
 
 # dependencies
-/node_modules
+node_modules/*
+!node_modules/react-chat-widget
+node_modules/react-chat-widget/*
+!node_modules/react-chat-widget/lib/index.js
 
 # IDEs and editors
 /.idea

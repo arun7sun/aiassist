@@ -1,0 +1,42 @@
+@import '../../../../../../scss/variables.scss';
+@import '../../../../../../scss/common.scss';
+
+.rcw-messages-container {
+  background-color: $white;
+  height: 50vh;
+  max-height: 410px;
+  overflow-y: auto;
+  padding-top: 10px;
+  -webkit-overflow-scrolling: touch;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(187, 181, 181); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(112, 112, 112); 
+}
+.rcw-full-screen {
+
+  .rcw-messages-container {
+    @include messages-container-fs;
+  }
+}
+
+@media screen and (max-width: 800px)  {
+  .rcw-messages-container {
+    @include messages-container-fs;
+  }
+}

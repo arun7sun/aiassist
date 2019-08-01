@@ -16,15 +16,15 @@ import MockRouter from './mockroutes';
 import Middleware from './helpers/middleware'
 import Logger from './helpers/Logger'
 
-let SamlStrategy = new Strategy({
-    clientID: config.CLIENT_ID,
-    clientSecret: config.CLIENT_SECRET,
-    callbackURL: '/api/sso',
-    userProfileURL:'https://people.googleapis.com/v1/people/me?personFields=emailAddresses,names,photos'
-},
-(accessToken, refreshToken, profile, done)=> {
-    return done(null, profile);
-})
+// let SamlStrategy = new Strategy({
+//     clientID: config.CLIENT_ID,
+//     clientSecret: config.CLIENT_SECRET,
+//     callbackURL: '/api/sso',
+//     userProfileURL:'https://people.googleapis.com/v1/people/me?personFields=emailAddresses,names,photos'
+// },
+// (accessToken, refreshToken, profile, done)=> {
+//     return done(null, profile);
+// })
 
 const Routes = Router(express, Middleware, passport);
 const MockRoutes = MockRouter(express, Middleware, passport);
@@ -52,24 +52,24 @@ app.use(bodyParser.urlencoded({
     type: 'application/x-www-form-urlencoding'
 }));
 app.use(cors());
-app.use(passport.initialize());
-app.use(passport.session());
-passport.use(SamlStrategy);
+// app.use(passport.initialize());
+// app.use(passport.session());
+// passport.use(SamlStrategy);
 
-if (config.USE_CACHE === "true" || config.USE_CACHE === true || config.LOG_ENABLED === "true" || config.LOG_ENABLED === true ) {
-    app.use(mung.json(
-        function transform(body, req, res) {
-            if (config.USE_CACHE === "true" || config.USE_CACHE === true ) {
-            Middleware.CacheDb(body, req, res)
-            }
-            if (config.LOG_ENABLED === "true" || config.LOG_ENABLED === true ) {
-                Logger.logging(body, req, res)
-            }
-        }, {
-            mungError: true
-        }
-    ));
-}
+// if (config.USE_CACHE === "true" || config.USE_CACHE === true || config.LOG_ENABLED === "true" || config.LOG_ENABLED === true ) {
+//     app.use(mung.json(
+//         function transform(body, req, res) {
+//             if (config.USE_CACHE === "true" || config.USE_CACHE === true ) {
+//             Middleware.CacheDb(body, req, res)
+//             }
+//             if (config.LOG_ENABLED === "true" || config.LOG_ENABLED === true ) {
+//                 Logger.logging(body, req, res)
+//             }
+//         }, {
+//             mungError: true
+//         }
+//     ));
+// }
 
 if (config.DEPLOYMENT_TYPE === "DEV") {
 
@@ -81,13 +81,13 @@ if (config.DEPLOYMENT_TYPE === "DEV") {
 
 }
 
-passport.serializeUser(function (user, done) {
-    done(null, user);
-});
+// passport.serializeUser(function (user, done) {
+//     done(null, user);
+// });
 
-passport.deserializeUser(function (user, done) {
-    done(null, user);
-});
+// passport.deserializeUser(function (user, done) {
+//     done(null, user);
+// });
 
 server.listen(config.APP_PORT, () => {
     console.log('Server started on port %d', port)

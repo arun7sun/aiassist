@@ -8,7 +8,7 @@
     "pre-start": "npm i && npm start",
     "build": "webpack",
     "deploy": "webpack-dev-server --hot --https --key=./pvtkey.pem --cert=./cert.pem --host 0.0.0.0 --port 443",
-    "start": "webpack-dev-server --hot --host 0.0.0.0 --port 8080"
+    "start": "webpack-dev-server --hot --host 0.0.0.0 --port 3000"
   },
   "authors": [
     "Adithya"

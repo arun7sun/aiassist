@@ -21,7 +21,7 @@ const {
 } = process.env;
 
 export default {
-    APP_PORT: APP_PORT || 8080,
+    APP_PORT: APP_PORT || 7070,
     COSMOS_DB: COSMOS_DB || "",
     COSMOS_DB_ENDPOINT: COSMOS_DB_ENDPOINT || "",
     COSMOS_DB_KEY: COSMOS_DB_KEY || "",

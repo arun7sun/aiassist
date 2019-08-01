@@ -35,7 +35,7 @@ export default class Barchart extends Component {
                 //         enabled: true,
                 //         useHTML: true,
                 //         formatter: function() {
-                //             return '<div class="chart-dot"> hai</div>'; 
+                //             return '<div className"chart-dot"> hai</div>'; 
                 //         },
                 //         y: 0
                 //     }
