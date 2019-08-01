@@ -4,8 +4,7 @@ import {
   Widget,
   toggleWidget,
   addResponseMessage,
-  addLinkSnippet,
-  Launcher
+  addLinkSnippet
 } from "../ChatWidget";
 // import {
 //   Widget,
@@ -139,7 +138,7 @@ class Chatbot extends Component {
           <div className="modal-dialog">
             <div className="modal-content">
               <div className="modal-header">
-                <h4 className="modal-title">AI Assist</h4>
+                <h4 className="modal-title">JARVIS</h4>
                 <button
                   type="button"
                   onClick={this.openModal}

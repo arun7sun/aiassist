@@ -98,6 +98,7 @@ class Header extends Component {
             <li>
               <i
                 data-toggle="modal"
+                data-backdrop="static" data-keyboard="false"
                 data-target="#search-box"
                 className="fas fa-search"
               />
@@ -108,7 +109,7 @@ class Header extends Component {
             >
               <button className="nav-link btn btn-default" type="button">
                 <img src="images/icon.png" />
-                <span>Hello</span> <i className="fa fa-caret-down" />
+                <span>User</span> <i className="fa fa-caret-down" />
               </button>
               <div className="dropdown-menu">
                 <a className="dropdown-item" href="#">

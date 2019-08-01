@@ -22,11 +22,11 @@ body {
   
   .modal-dialog {
     top: 0;
-    max-width: 53%;
+    max-width:100%;
     /* width: 100%; */
     margin: 9px auto 0;
     position: fixed;
-    right: 21.3%;
+    padding: 0px 25% 0 29.5%;
     .modal-content {
       border-radius : 0.6rem;
     }
@@ -44,7 +44,7 @@ body {
 
   .modal-title {
     width: 100%;
-    text-align: center;
+    
     border-radius: 0.3rem;
   }
   .form-action {
@@ -52,7 +52,7 @@ body {
 
     .input-group {
       margin: 0 auto;
-      width: 68%;
+      width: 58%;
       i {
         opacity: 0.4;
       }
@@ -64,6 +64,7 @@ body {
     background-color: #004c91;
     color: white;
     min-height: 40px;
+    text-align: center;
     padding: 0 10px;
     border-radius: 4px 4px 0px 0px;
     font-size: 18px;
@@ -121,220 +122,220 @@ body {
     cursor: pointer;
   }
 
-  @media (min-width: 300px) and (max-width: 520px) {
+  // @media (min-width: 300px) and (max-width: 520px) {
     
   
-      .main-logo {
-        display: none;
-      }
+  //     .main-logo {
+  //       display: none;
+  //     }
   
-      .form-action {
-        margin: auto;
-        width: auto;
-      }
+  //     .form-action {
+  //       margin: auto;
+  //       width: auto;
+  //     }
     
   
-    .input-group-text {
-      padding: 0px 6px;
-    }
+  //   .input-group-text {
+  //     padding: 0px 6px;
+  //   }
   
-    .fa-search {
-      margin-top: 7px;
-      margin-right: 7px;
-      cursor: pointer;
-    }
+  //   .fa-search {
+  //     margin-top: 7px;
+  //     margin-right: 7px;
+  //     cursor: pointer;
+  //   }
   
-      .form-control {
-        width: 30%;
-        display: flex;
-        margin: auto;
-      }
-  
-  
-      .search-icon {
-        display: block;
-      }
-  
-      .spark-logo {
-        width: 47px;
-        display: block;
-        margin-left: 5px;
-        height: 44px;
-      }
+  //     .form-control {
+  //       width: 30%;
+  //       display: flex;
+  //       margin: auto;
+  //     }
   
   
-      .input-group {
-        float: right;
-        display: none;
-        width: auto !important;
-      }
+  //     .search-icon {
+  //       display: block;
+  //     }
   
-      .search-icon {
-        display: flex-end;
-      }
+  //     .spark-logo {
+  //       width: 47px;
+  //       display: block;
+  //       margin-left: 5px;
+  //       height: 44px;
+  //     }
+  
+  
+  //     .input-group {
+  //       float: right;
+  //       display: none;
+  //       width: auto !important;
+  //     }
+  
+  //     .search-icon {
+  //       display: flex-end;
+  //     }
     
   
-    .modal {
-      .modal-dialog {
-        max-width: 100% !important;
-        width: 100%;
-        top: -5px !important;
-        right: 0% !important;
-      }
+  //   .modal {
+  //     .modal-dialog {
+  //       max-width: 100% !important;
+  //       width: 100%;
+  //       top: -5px !important;
+  //       right: 0% !important;
+  //     }
   
-      .modal-title {
-        font-size: 18px;
-        margin: 5px 0;
-      }
-    }
-  }
+  //     .modal-title {
+  //       font-size: 18px;
+  //       margin: 5px 0;
+  //     }
+  //   }
+  // }
   
-  @media (min-width: 520px) and (max-width: 768px) {
-      li .fa-search{
-        display: none;
-      }
+  // @media (min-width: 520px) and (max-width: 768px) {
+  //     li .fa-search{
+  //       display: none;
+  //     }
   
-      .form-action {
-        margin: auto;
-        width: 100%;
-        display: -webkit-box;
-      }
+  //     .form-action {
+  //       margin: auto;
+  //       width: 100%;
+  //       display: -webkit-box;
+  //     }
     
   
-    .modal-header .close {
-      margin: 0px !important;
-    }
+  //   .modal-header .close {
+  //     margin: 0px !important;
+  //   }
   
-    .fa-search {
-      margin-top: 7px;
-      margin-right: 7px;
-      cursor: pointer;
-    }
+  //   .fa-search {
+  //     margin-top: 7px;
+  //     margin-right: 7px;
+  //     cursor: pointer;
+  //   }
   
-    .input-group-text {
-      padding: 0px 8px;
-    }
+  //   .input-group-text {
+  //     padding: 0px 8px;
+  //   }
   
-    .input-group-text .fa-search {
-      margin-top: 7px;
-    }
+  //   .input-group-text .fa-search {
+  //     margin-top: 7px;
+  //   }
   
-      .form-control {
-        display: flex;
-        margin: auto;
-      }
-  
-  
-      .search-icon {
-        display: block;
-      }
+  //     .form-control {
+  //       display: flex;
+  //       margin: auto;
+  //     }
   
   
-      .search-icon {
-        display: flex-end;
-      }
+  //     .search-icon {
+  //       display: block;
+  //     }
+  
+  
+  //     .search-icon {
+  //       display: flex-end;
+  //     }
     
   
-    .modal {
-      .modal-dialog {
-        top: -6px;
-        max-width: 69% !important;
-        margin: 14px auto 0 !important;
-        position: fixed !important;
-        right: 14% !important;
-      }
+  //   .modal {
+  //     .modal-dialog {
+  //       top: -6px;
+  //       max-width: 69% !important;
+  //       margin: 14px auto 0 !important;
+  //       position: fixed !important;
+  //       right: 14% !important;
+  //     }
   
-      .modal-title {
-        font-size: 18px;
-        margin: 5px 0;
-      }
-    }
-  }
+  //     .modal-title {
+  //       font-size: 18px;
+  //       margin: 5px 0;
+  //     }
+  //   }
+  // }
   
-  @media (min-width: 766px) and (max-width: 770px) {
-    .modal-header .close {
-      margin: 4px !important;
-    }
-      .input-group-text {
-        padding: 0px 8px !important;
-      }
-      li .fa-search{
-        display: none;
-      }
-      .modal{
-        .modal-dialog{
-          padding: 0 19% !important;
-        }
-      }
-    }
+  // @media (min-width: 766px) and (max-width: 770px) {
+  //   .modal-header .close {
+  //     margin: 4px !important;
+  //   }
+  //     .input-group-text {
+  //       padding: 0px 8px !important;
+  //     }
+  //     li .fa-search{
+  //       display: none;
+  //     }
+  //     .modal{
+  //       .modal-dialog{
+  //         padding: 0 19% !important;
+  //       }
+  //     }
+  //   }
   
   
-  @media (min-width: 768px) and (max-width: 1300px) {
-      .form-action {
-        margin: auto;
-        width: 100%;
-        padding: 0 21% 0 11%;
-      }
-      li .fa-search{
-        display: none;
-      }
-      .input-group {
-        width: 100% !important;
-        padding: 8px;
-        display: -webkit-box !important;
-        border: 0;
-      }
-      .form-control {
-        height: 30px !important;
-      }
-      .input-group-text {
-        padding: 3px 8px;
-      }
+  // @media (min-width: 768px) and (max-width: 1300px) {
+  //     .form-action {
+  //       margin: auto;
+  //       width: 100%;
+  //       padding: 0 21% 0 8%;
+  //     }
+  //     li .fa-search{
+  //       display: none;
+  //     }
+  //     .input-group {
+  //       width: 100% !important;
+  //       padding: 8px;
+  //       display: -webkit-box !important;
+  //       border: 0;
+  //     }
+  //     .form-control {
+  //       height: 30px !important;
+  //     }
+  //     .input-group-text {
+  //       padding: 3px 8px;
+  //     }
      
     
-      .modal {
-        .modal-dialog {
-          top: -2px;
-          max-width: 100% !important;
-          margin: 10px auto 0 !important;
-          position: fixed !important;
-          right: 0 !important;
-          padding: 0 21% 0 26.8%;
-        }
+  //     .modal {
+  //       .modal-dialog {
+  //         top: -2px;
+  //         max-width: 100% !important;
+  //         margin: 10px auto 0 !important;
+  //         position: fixed !important;
+  //         right: 0 !important;
+  //         padding: 0 21% 0 26.8%;
+  //       }
   
-        .modal-title {
-          font-size: 18px;
-          margin: 5px 0;
-        }
-      }
-      .form-control {
-        display: flex;
-        width: 100%;
-        margin: auto;
-      }
+  //       .modal-title {
+  //         font-size: 18px;
+  //         margin: 5px 0;
+  //       }
+  //     }
+  //     .form-control {
+  //       display: flex;
+  //       width: 100%;
+  //       margin: auto;
+  //     }
   
-      .search-icon {
-        display: flex-end;
-      }
-  }
+  //     .search-icon {
+  //       display: flex-end;
+  //     }
+  // }
   
-  @media (min-width: 1600px) and (max-width: 1900px) {
+  // @media (min-width: 1600px) and (max-width: 1900px) {
     
-      .input-group {
-        padding: 0 1% 0 2.2%;
-      }
-      .modal {
-        .modal-dialog {
-          margin: 0 auto;
-          width: 100%;
-          margin-top: 8px;
-        }
+  //     .input-group {
+  //       padding: 0 1% 0 2.2%;
+  //     }
+  //     .modal {
+  //       .modal-dialog {
+  //         margin: 0 auto;
+  //         width: 100%;
+  //         margin-top: 8px;
+  //       }
   
-        .modal-title {
-          font-size: 18px;
-          margin: 5px 0;
-        }
-      }
+  //       .modal-title {
+  //         font-size: 18px;
+  //         margin: 5px 0;
+  //       }
+  //     }
     
-  }
+  // }
   
