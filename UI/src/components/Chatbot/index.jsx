@@ -4,6 +4,7 @@ import {
   Widget,
   toggleWidget,
   addResponseMessage,
+  setQuickButtons,
   addLinkSnippet
 } from "../ChatWidget";
 // import {
@@ -44,6 +45,7 @@ const customStyles = {
   }
 };
 
+
 class Chatbot extends Component {
   constructor() {
     super();
@@ -63,12 +65,12 @@ class Chatbot extends Component {
     link:
       "https://corporate.walmart.com/privacy-security/walmart-privacy-policy"
   };
-
+  
+  
   componentDidMount = () => {
     toggleWidget();
     addResponseMessage(this.link.title);
 
-    // setQuickButtons(this.buttons);
   };
 
   componentWillUnmount() {
