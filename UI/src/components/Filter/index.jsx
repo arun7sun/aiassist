@@ -7,7 +7,7 @@ import BarChart from "../Chart/BarChart";
 // Exporting(Highcharts);
 // HichartsOfflineExporting(Highcharts);
 
-export default class TestChart extends Component {
+export default class Filter extends Component {
     state ={
         selectedDimension: 'X Axis',
         selectedMeasure: 'Y Axis',

@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import {
   Widget,
   toggleWidget,
+  toggleMsgLoader,
   addResponseMessage,
   setQuickButtons,
   addLinkSnippet
@@ -92,6 +93,17 @@ class Chatbot extends Component {
         }
       });
   };
+  handleNewUserMessage = (newMessage) => {    
+    toggleMsgLoader();
+    setTimeout(() => {
+      toggleMsgLoader();      
+      if (newMessage === 'fruits') {
+        setQuickButtons([ { label: 'Apple', value: 'apple' }, { label: 'Orange', value: 'orange' }, { label: 'Pear', value: 'pear' }, { label: 'Banana', value: 'banana' } ]);
+      } else {
+        addResponseMessage('Didnt get it');
+      }
+    }, 2000);
+  }
 
   manageResponse = body => {
     return body.message.length == 1
@@ -124,6 +136,10 @@ class Chatbot extends Component {
         false
       );
     }
+    handleQuickButtonClicked = (e) => {
+      addResponseMessage('Selected ' + e);
+      setQuickButtons([]);
+    }
     handleFeedback = e => {
       this.setState({ feedback: e });
     };
@@ -153,6 +169,7 @@ class Chatbot extends Component {
               <div className="modal-body">
                 <Widget
                   handleNewUserMessage={this.handleNewUserMessage}
+                  handleQuickButtonClicked={this.handleQuickButtonClicked}
                   // title={false}
                   // showCloseButton={true}
                   profileAvatar="images/chatbot-icon.png"

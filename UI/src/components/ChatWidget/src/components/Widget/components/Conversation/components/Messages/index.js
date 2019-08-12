@@ -23,11 +23,6 @@ class Messages extends Component {
   getComponentToRender = message => {
     const ComponentToRender = message.get("component");
     const previousMessage = this.props.messages.get();
-    console.log("huehue: ", message);
-    console.log("hue: ", previousMessage);
-    console.log("props is: ", message.get("props"));
-    console.log("lalal: ", message.get("type"));
-    console.log("askldh: ", message.get("sender"));
     if (message.get("type") === "component") {
       return (
         <React.Fragment>

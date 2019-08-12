@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 // import { connect } from 'react-redux';
 import "./style";
-import Chart from "components/TestChart";
+import Chart from "components/Filter";
 
-class Dashboard extends Component {
+class Landingpage extends Component {
   constructor() {
     super();
 
@@ -50,17 +50,11 @@ class Dashboard extends Component {
         </div> 
         )
    }
-   console.log('id : ',this.state.id)
     return (
       <main className="main-container">
         <div>
-          <div className="box">
-            <button className="col-12 btn btn-light" onClick={this.handleView}>
-              Click here
-            </button>
-          </div>
         </div>
-        {this.state.view && <div><button className="btn btn-info" onClick={this.handleAdd}>
+        {<div><button className="btn btn-info" onClick={this.handleAdd}>
           +
         </button>
         {array}
@@ -70,4 +64,4 @@ class Dashboard extends Component {
     );
   };
 }
-export default Dashboard;
+export default Landingpage;

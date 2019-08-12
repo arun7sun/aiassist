@@ -4,9 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import "./style";
 
 import Header from "components/Header";
-import Chart from "components/TestChart";
-import Dashboard from "scenes";
-import TestChart from "../TestChart";
+import Landingpage from "scenes";
 
 
 
@@ -65,7 +63,7 @@ const Root = props => {
     <div className="section">
       <Header />
       <Switch>
-        <Route path="/" component={Dashboard} />
+        <Route path="/" component={Landingpage} />
       </Switch>
     </div>
   );

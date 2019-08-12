@@ -31,7 +31,7 @@ class Sender extends Component {
             ref={this.input}
           />
           <button type="submit" className="send-icon">
-            <i class="fas fa-paper-plane" alt="send" />
+            <i className="fas fa-paper-plane" alt="send" />
           </button>
         </form>
       </div>
