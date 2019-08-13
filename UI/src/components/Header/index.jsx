@@ -6,7 +6,6 @@ import { NavLink } from "react-router-dom";
 import Chatbot from "components/Chatbot";
 import InputBox from "components/InputBox";
 
-
 import "./style";
 import "../Chatbot/style.css";
 
@@ -94,26 +93,33 @@ class Header extends Component {
           </div>
           <InputBox />
           <Chatbot handleNewUserMessage={this.handleNewUserMessage} />
-          <div className="navbar-nav d-flex ml-auto">
+          <div className="navbar-nav d-flex ml-auto profile-popup">
             <li>
               <i
                 data-toggle="modal"
-                data-backdrop="static" data-keyboard="false"
+                data-backdrop="static"
+                data-keyboard="false"
                 data-target="#search-box"
-                className="fas fa-search"
+                className="fas fa-search search-modal-icon"
               />
             </li>
-            <li
-              className="nav-item  dropdown dropdown-toggle"
-              data-toggle="dropdown"
-            >
-              <button className="nav-link btn btn-default" type="button">
+
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
                 <img src="images/icon.png" />
-                <span>User</span> <i className="fa fa-caret-down" />
-              </button>
-              <div className="dropdown-menu">
-                <a className="dropdown-item" href="#">
-                  Logout <i className="fa fa-sign-out" />
+                <span>Adithyaaaa </span>
+              </a>
+              <div className="dropdown-menu dropdown-menu-right" style={{"minWidth":"50px"}} aria-labelledby="navbarDropdown">
+                <a className="dropdown-item" href="http://localhost:3000/logout">
+                  Logout
                 </a>
               </div>
             </li>

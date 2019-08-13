@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 // import { connect } from 'react-redux';
 import "./style";
 import Chart from "components/Filter";
+import BarChart from "components/Chart/BarChart"
 
 class Landingpage extends Component {
   constructor() {
@@ -52,13 +53,13 @@ class Landingpage extends Component {
    }
     return (
       <main className="main-container">
-        <div>
-        </div>
-        {<div><button className="btn btn-info" onClick={this.handleAdd}>
+        {/* {<div className="row"><button className="btn btn-info" onClick={this.handleAdd}>
           +
         </button>
         {array}
-        </div>}
+        </div>} */}
+        <Chart/>
+        <BarChart/>
         
       </main>
     );

@@ -1,0 +1,23 @@
+.filter {
+    background-color: aliceblue;
+    .form-control,.input-group-text{
+        background-color: rgb(243, 243, 243);
+    }
+    .btn {
+        // align-content: flex-end;
+        h4 {
+            display: inline-flex;
+            font-weight: bold;
+            font-size: 40px;
+            opacity: 0.2;
+            color: #2678D6;
+            padding-right : 50px;
+            // text-align: left;
+          }
+          color : #2678D6;
+          font-weight: 500;
+    }
+    .filter-body {
+        display: flex;
+    }
+  }
