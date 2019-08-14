@@ -1,117 +1,217 @@
 import React, { Component } from "react";
-// import Highcharts from "highcharts";
-// import Exporting from "highcharts/modules/exporting";
-// import HichartsOfflineExporting from "highcharts/modules/offline-exporting";
-import Select from "react-select";
 import BarChart from "../Chart/BarChart";
 import "./style";
-// Exporting(Highcharts);
-// HichartsOfflineExporting(Highcharts);
+import Select from "react-select";
 
 export default class Filter extends Component {
   state = {
-    selectedDimension: "X Axis",
-    selectedMeasure: "Y Axis"
-  };
-  handleDimension = selectedDimension => {
-    this.setState({ selectedDimension });
-    console.log(`dimension selected:`, selectedDimension);
-  };
-  handleMeasure = selectedMeasure => {
-    this.setState({ selectedMeasure });
-    console.log(`measure selected:`, selectedMeasure);
-  };
-  static defaultProps = {
-    data: {
-      id: "test",
-      title: "Title goes here",
-      legend: {
-        enabled: false
-      },
-      type: "column",
-      height: 230,
-      Xaxis: ["A", "B", "C", "D", "E", "F"],
-      plotOptions: {
-        series: {
-          pointPadding: 0,
-          groupPadding: 0.1
-          // pointWidth: data.plotOptions.series.pointWidth,
-        },
-        column: {
-          pointWidth: "50"
-        }
-      },
-      data: [
-        {
-          name: "",
-          data: [49.9, 71.5, 106.4, 129.2, 144.0],
-          color: "#ef924b"
-        }
-      ]
-    }
-  };
-  //   handleView = () => {
+    f1: false,
+    f2: false,
+    f3: false,
+    f4: false,
+    f5: false,
+    f6: false,
 
-  //   }
+  };
+
+  handlef1 = () => {
+    this.setState({
+      f1: !this.state.f1
+    });
+  };
+  handlef2 = () => {
+    this.setState({
+      f2: !this.state.f2
+    });
+  };
+  handlef3 = () => {
+    this.setState({
+      f3: !this.state.f3
+    });
+  };
+  handlef4 = () => {
+    this.setState({
+      f4: !this.state.f4
+    });
+  };
+  handlef5 = () => {
+    this.setState({
+      f5: !this.state.f5
+    });
+  };
+  handlef6 = () => {
+    this.setState({
+      f6: !this.state.f6
+    });
+  };
+  handleClick = () => {
+
+  }
 
   render() {
-    const barData = {
-      id: "chart_id",
-      title: "Title goes here",
-      legend: {
-        enabled: false
-      },
-      type: "column",
-      height: 350,
-      Xaxis: ["A", "B", "C", "D", "E", "F"],
-      xlabel: this.state.selectedDimension.label,
-      ylabel: this.state.selectedMeasure.label,
-      plotOptions: {
-        series: {
-          pointPadding: 0,
-          groupPadding: 0.1
-          // pointWidth: data.plotOptions.series.pointWidth,
-        },
-        column: {
-          pointWidth: "50"
-        }
-      },
-      data: [
-        {
-          name: "",
-          data: [49.9, 71.5, 106.4, 129.2, 144.0],
-          color: "#3E8DE8"
-        }
-      ]
-    };
-    const filter = [
-      { value: "division", label: "Division" },
-      { value: "market", label: "Market" },
-      { value: "grade", label: "Grade" },
-      { value: "region", label: "Region" },
-      { value: "store", label: "Store" }
+    const options = [
+      { value: "a", label: "A" },
+      { value: "b", label: "B" },
+      { value: "c", label: "C" }
     ];
-    const dimensions = [
-      { value: "division", label: "Division" },
-      { value: "market", label: "Market" },
-      { value: "grade", label: "Grade" },
-      { value: "region", label: "Region" },
-      { value: "store", label: "Store" },
-      { value: "job", label: "Job Family" },
-      { value: "ftpttemp", label: "FT/PT/Temp" }
-    ];
-    const measures = [
-      { value: "hc", label: "Headcount" },
-      { value: "exits", label: "Exits" },
-      { value: "turnover", label: "Turnover" },
-      { value: "hires", label: "Hires" },
-      { value: "abpt", label: "AB PT Turnover" }
-    ];
-    const { id } = this.props.data;
-    console.log("dimension values : ", dimensions.values);
-    console.log("dimensions : ", dimensions);
     return (
-      <div className="filter">
+      <div id="accordion" className="accordion">
+        <div className="row">
+          <div
+            className="col-md-3 header"
+            data-toggle="collapse"
+            href="#collapseOne"
+          >
+            <h1 className="text-center">1</h1>
+            <h4>Filter</h4>
+          </div>
+          <div
+            className="col-md-3 header"
+            data-toggle="collapse"
+            href="#collapseTwo"
+          >
+            <h1 className="text-center">2</h1>
+          </div>
+          <div
+            className="col-md-3 header"
+            data-toggle="collapse"
+            href="#collapseThree"
+          >
+            <h1 className="text-center">3</h1>
+          </div>
+          <div
+            className="col-md-3 header"
+            data-toggle="collapse"
+            href="#collapseFour"
+          >
+            <h1 className="text-center">4</h1>
+          </div>
+        </div>
+
+        <div className="card">
+          <div id="collapseOne" className="collapse show" data-parent="#accordion">
+            <div className="card-body1 row">
+              <div className="col fields">
+                Fields
+                <div className="input-group mb-3">
+                  <div className="input-group-prepend">
+                    <span className="input-group-text" id="basic-addon1">
+                      <i className="fa fa-search" aria-hidden="true" />
+                    </span>
+                  </div>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Search"
+                    aria-label="Username"
+                    aria-describedby="basic-addon1"
+                  />
+                </div>
+                <p>Label 1</p>
+                <input
+                  type="checkbox"
+                  value={this.state.f1}
+                  onChange={this.handlef1}
+                />
+                Division
+                <br />
+                <input
+                  type="checkbox"
+                  value={this.state.f2}
+                  onChange={this.handlef2}
+                />
+                Region
+                <br />
+                <input
+                  type="checkbox"
+                  value={this.state.f3}
+                  onChange={this.handlef3}
+                />
+                Market
+                <br/><br/>
+                <p>Label 2</p>
+                <input
+                  type="checkbox"
+                  value={this.state.f4}
+                  onChange={this.handlef4}
+                />
+                Job Family
+                <br />
+                <input
+                  type="checkbox"
+                  value={this.state.f5}
+                  onChange={this.handlef5}
+                />
+                Filter 2
+                <br />
+                <input
+                  type="checkbox"
+                  value={this.state.f6}
+                  onChange={this.handlef6}
+                />
+                Filter 3
+              </div>
+
+              <div className="col selected">
+                Selected
+                {/* {this.state.f1 ? (
+                  <Select
+                    isMulti
+                    placeholder="Filter 1"
+                    options={options}
+                    className="selectedf1"
+                  />
+                ) : null}
+                {this.state.f2 ? (
+                  <Select
+                    isMulti
+                    placeholder="Filter 2"
+                    options={options}
+                    className="selectedf2"
+                  />
+                ) : null}
+                {this.state.f3 ? (
+                  <Select
+                    isMulti
+                    placeholder="Filter 3"
+                    options={options}
+                    className="selectedf3"
+                  />
+                ) : null} */}
+              </div>
+              <div className="col applied">
+                <p>Applied</p>
+                <button type="button" className="btn btn-info" onClick={this.handleClick}>
+                  Apply
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="card">
+          <div id="collapseTwo" className="collapse" data-parent="#accordion">
+            <div className="card-body2">Lorem ipsum.2222</div>
+          </div>
+        </div>
+
+        <div className="card">
+          <div id="collapseThree" className="collapse" data-parent="#accordion">
+            <div className="card-body3">Lorem ipsum..3333</div>
+          </div>
+        </div>
+
+        <div className="card">
+          <div id="collapseFour" className="collapse" data-parent="#accordion">
+            <div className="card-body4">Lorem ipsum..4444</div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+{
+  /* <div className="filter">
         <p>
           <button
             className="col-3 btn btn-default"
@@ -133,7 +233,6 @@ export default class Filter extends Component {
             aria-controls="multiCollapseExample2"
           >
             <h4>2</h4>
-            Select
           </button>
           <button
             className="col-3 btn btn-default"
@@ -144,7 +243,6 @@ export default class Filter extends Component {
             aria-controls="multiCollapseExample3"
           >
             <h4>3</h4>
-            View
           </button>
           <button
             className="col-3 btn btn-default"
@@ -155,11 +253,8 @@ export default class Filter extends Component {
             aria-controls="multiCollapseExample4"
           >
             <h4>4</h4>
-            Access
           </button>
         </p>
-
-
 
         <div className="row">
           <div className="col-12">
@@ -182,13 +277,41 @@ export default class Filter extends Component {
                         aria-describedby="basic-addon1"
                       />
                     </div>
+                    <input
+                      type="checkbox"
+                      name="vehicle1"
+                      value={this.state.f1}
+                      onChange={this.handlef1}
+                    />
+                    Filter 1
+                    <br />
+                    <input
+                      type="checkbox"
+                      name="vehicle2"
+                      value={this.state.f2}
+                      onChange={this.handlef2}
+                    />
+                    Filter 2
+                    <br />
+                    <input
+                      type="checkbox"
+                      name="vehicle3"
+                      value={this.state.f3}
+                      onChange={this.handlef3}
+                    />
+                    Filter 3
                   </div>
-                  <div className="col-4 selected">Selected</div>
+                  <div className="col-4 selected">Selected
+                  {this.state.f1 ? <Select isMulti placeholder= "Filter 1" options={options} className="selectedf1" />:null}
+                  {this.state.f2 ? <Select isMulti placeholder= "Filter 2" options={options} className="selectedf2" />:null}
+                  {this.state.f3 ? <Select isMulti placeholder= "Filter 3" options={options} className="selectedf3" />:null}
+                  </div>
                   <div className="col-4 applied">Applied</div>
                 </div>
               </div>
             </div>
           </div>
+
           <div className="col-12">
             <div className="collapse multi-collapse" id="multiCollapseExample2">
               <div className="card card-body">
@@ -199,24 +322,20 @@ export default class Filter extends Component {
               </div>
             </div>
           </div>
+
           <div className="col-12">
             <div className="collapse multi-collapse" id="multiCollapseExample3">
-              <div className="card card-body">
-                In Progress
-              </div>
+              <div className="card card-body">In Progress</div>
             </div>
           </div>
+
           <div className="col-12">
             <div className="collapse multi-collapse" id="multiCollapseExample4">
-              <div className="card card-body">
-              In Progress  
-              </div>
+              <div className="card card-body">In Progress</div>
             </div>
           </div>
         </div>
-      </div>
-    );
-  }
+      </div> */
 }
 {
   /* 

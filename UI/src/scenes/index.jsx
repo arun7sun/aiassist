@@ -59,7 +59,7 @@ class Landingpage extends Component {
         {array}
         </div>} */}
         <Chart/>
-        <BarChart/>
+        {/* <BarChart/> */}
         
       </main>
     );
