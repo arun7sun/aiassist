@@ -1,6 +1,7 @@
 
 const apiPaths = {
-    chat: '/chat'
+    chat: '/chat',
+    chart:'/chart/datafetch'
 }
 
 export default apiPaths;

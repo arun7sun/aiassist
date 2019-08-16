@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 // import { connect } from 'react-redux';
 import "./style";
-import Chart from "components/Filter";
+import Filter from "components/Filter";
 import BarChart from "components/Chart/BarChart"
 
 class Landingpage extends Component {
@@ -58,7 +58,7 @@ class Landingpage extends Component {
         </button>
         {array}
         </div>} */}
-        <Chart/>
+        <Filter/>
         {/* <BarChart/> */}
         
       </main>
