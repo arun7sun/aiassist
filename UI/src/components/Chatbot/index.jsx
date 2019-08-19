@@ -6,7 +6,9 @@ import {
   toggleMsgLoader,
   addResponseMessage,
   setQuickButtons,
-  addLinkSnippet
+  renderCustomComponent,
+  addLinkSnippet,
+  dropMessages
 } from "../ChatWidget";
 // import {
 //   Widget,
@@ -18,6 +20,7 @@ import {
 import axios from "axios";
 import apiPaths from "../../apiPaths";
 import Modal from "react-modal";
+import BarChart from "components/Chart/BarChart";
 
 // import "./style.css";
 
@@ -41,11 +44,9 @@ const customStyles = {
     minWidth: "23% !important",
     marginRight: "-50%",
     transform: "translate(-51%, -50%)",
-    color: "white",
-    fontFamily: "Helvettica"
+    color: "white"
   }
 };
-
 
 class Chatbot extends Component {
   constructor() {
@@ -53,7 +54,9 @@ class Chatbot extends Component {
 
     this.state = {
       modalIsOpen: false,
-      feedback: ""
+      feedback: "",
+      agree : false,
+      terms : true
     };
 
     this.openModal = this.openModal.bind(this);
@@ -62,21 +65,45 @@ class Chatbot extends Component {
   }
   link = {
     title:
-      "Welcome to the chat!  Don’t forget to comply with all Walmart standards, policies and procedures.  Don’t send personal information, such as medical diagnoses, social security numbers or financial account numbers, through the chat.",
+      "Hi I'm JARVIS. Welcome to the chat! Don’t forget to comply with all Walmart standards, policies and procedures. Ok, before we start I have to do this legal thing. Please confirm that you will not share highly sensitive information with me such as social security numbers.",
     link:
       "https://corporate.walmart.com/privacy-security/walmart-privacy-policy"
   };
-  
-  
+
   componentDidMount = () => {
     toggleWidget();
     addResponseMessage(this.link.title);
-
+    renderCustomComponent(this.buttonComponent);
   };
+  componentDidUpdate = () => {
+    renderCustomComponent(this.buttonComponent);
+  }
 
   componentWillUnmount() {
     toggleWidget();
   }
+
+  buttonComponent = () => {
+    return (
+      <div className={this.state.terms?"terms":"terms-hide"}>
+        <button type="button" className="agree" onClick={this.handleAgree}>
+          AGREE
+        </button>
+        <br />
+        <br />
+        <button type="button" className="disagree" data-dismiss="modal">
+          DISAGREE
+        </button>
+      </div>
+    );
+  };
+
+  handleAgree = () => {
+    this.setState({ 
+    agree: true,
+    terms : false });
+    console.log('stateterm',this.state.terms)
+  };
 
   handleNewUserMessage = newMessage => {
     // sent the message throught the backend API
@@ -93,17 +120,24 @@ class Chatbot extends Component {
         }
       });
   };
-  handleNewUserMessage = (newMessage) => {    
+  handleNewUserMessage = newMessage => {
     toggleMsgLoader();
     setTimeout(() => {
-      toggleMsgLoader();      
-      if (newMessage === 'fruits') {
-        setQuickButtons([ { label: 'Apple', value: 'apple' }, { label: 'Orange', value: 'orange' }, { label: 'Pear', value: 'pear' }, { label: 'Banana', value: 'banana' } ]);
+      toggleMsgLoader();
+      if (newMessage === "fruits") {
+        setQuickButtons([
+          { label: "Apple", value: "apple" },
+          { label: "Orange", value: "orange" },
+          { label: "Pear", value: "pear" },
+          { label: "Banana", value: "banana" }
+        ]);
+      } else if (newMessage === "heyo") {
+        renderCustomComponent(this.buttonComponent);
       } else {
-        addResponseMessage('Didnt get it');
+        addResponseMessage("Didnt get it");
       }
     }, 2000);
-  }
+  };
 
   manageResponse = body => {
     return body.message.length == 1
@@ -136,10 +170,10 @@ class Chatbot extends Component {
         false
       );
     }
-    handleQuickButtonClicked = (e) => {
-      addResponseMessage('Selected ' + e);
+    handleQuickButtonClicked = e => {
+      addResponseMessage("Selected " + e);
       setQuickButtons([]);
-    }
+    };
     handleFeedback = e => {
       this.setState({ feedback: e });
     };
@@ -177,6 +211,7 @@ class Chatbot extends Component {
                   // launcher={false}
                   // fullScreenMode={false}
                   senderPlaceHolder="Type your query..."
+                  isAgree={this.state.agree}
                 />
               </div>
             </div>
@@ -210,7 +245,7 @@ class Chatbot extends Component {
               <button className="positive" onClick={this.closeModal}>
                 <i className="fa fa-thumbs-up" />
               </button>
-              <button className="negative" onClick={this.closeModal }>
+              <button className="negative" onClick={this.closeModal}>
                 <i className="fa fa-thumbs-down" />
               </button>
             </div>

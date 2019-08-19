@@ -6,7 +6,6 @@ import Select from "react-select";
 import Table from "react-table";
 import axios from "axios";
 import _ from "lodash";
-import ReactTable from "react-table";
 import apiPaths from "../../apiPaths";
 
 export default class Filter extends Component {

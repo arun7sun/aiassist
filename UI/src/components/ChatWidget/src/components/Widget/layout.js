@@ -24,6 +24,7 @@ const WidgetLayout = props => (
         showChat={props.showChat}
         showCloseButton={props.showCloseButton}
         disabledInput={props.disabledInput}
+        isAgree = {props.isAgree}
         autofocus={props.autofocus}
         titleAvatar={props.titleAvatar}
       />
@@ -54,7 +55,8 @@ WidgetLayout.propTypes = {
   fullScreenMode: PropTypes.bool,
   badge: PropTypes.number,
   autofocus: PropTypes.bool,
-  customLauncher: PropTypes.func
+  customLauncher: PropTypes.func,
+  isAgree : PropTypes.bool
 };
 
 export default connect(store => ({
