@@ -10,17 +10,11 @@ import {
   addLinkSnippet,
   dropMessages
 } from "../ChatWidget";
-// import {
-//   Widget,
-//   toggleWidget,
-//   addResponseMessage,
-//   addLinkSnippet,
-//   Launcher
-// } from 'react-chat-widget';
+
 import axios from "axios";
 import apiPaths from "../../apiPaths";
 import Modal from "react-modal";
-import BarChart from "components/Chart/BarChart";
+import ClickQuery from "components/Recourse"
 
 // import "./style.css";
 
@@ -55,8 +49,8 @@ class Chatbot extends Component {
     this.state = {
       modalIsOpen: false,
       feedback: "",
-      agree : false,
-      terms : true
+      agree: false,
+      terms: true
     };
 
     this.openModal = this.openModal.bind(this);
@@ -65,44 +59,52 @@ class Chatbot extends Component {
   }
   link = {
     title:
-      "Hi I'm JARVIS. Welcome to the chat! Don’t forget to comply with all Walmart standards, policies and procedures. Ok, before we start I have to do this legal thing. Please confirm that you will not share highly sensitive information with me such as social security numbers.",
-    link:
-      "https://corporate.walmart.com/privacy-security/walmart-privacy-policy"
+      "Hi I'm JARVIS. Welcome to the chat! Don’t forget to comply with all Walmart standards, policies and procedures. Ok, before we start I have to do this legal thing. Please confirm that you will not share highly sensitive information with me such as social security numbers."
   };
+
+  recourseButton = [{ name: "Job Family", value: "job" }, { name: "Asc Type", value: "asc" }, { name: "Department", value: "c" }, { name: "Grade Level", value: "d" }];
 
   componentDidMount = () => {
     toggleWidget();
     addResponseMessage(this.link.title);
-    renderCustomComponent(this.buttonComponent);
+    renderCustomComponent(this.welcomeMessage);
+    // renderCustomComponent(this.clickQuenry,{props : [{ name: "Job Family", value: "job" }, { name: "Asc Type", value: "b" }, { name: "Department", value: "c" }, { name: "Grade Level", value: "d" }] },true);
   };
   componentDidUpdate = () => {
-    renderCustomComponent(this.buttonComponent);
-  }
+    renderCustomComponent(this.welcomeMessage);
+  };
 
   componentWillUnmount() {
     toggleWidget();
   }
 
-  buttonComponent = () => {
+  welcomeMessage = () => {
     return (
-      <div className={this.state.terms?"terms":"terms-hide"}>
+      <div className={this.state.terms ? "terms" : "terms-hide"}>
         <button type="button" className="agree" onClick={this.handleAgree}>
-          AGREE
+          I, Agree
         </button>
-        <br />
-        <br />
         <button type="button" className="disagree" data-dismiss="modal">
-          DISAGREE
+          Disagree
         </button>
       </div>
     );
   };
 
+  clickQuery = () => {
+    return (
+      <ClickQuery/>
+    );
+  };
+
   handleAgree = () => {
-    this.setState({ 
-    agree: true,
-    terms : false });
-    console.log('stateterm',this.state.terms)
+    this.setState({
+      agree: true,
+      terms: false
+    });
+    console.log("stateterm", this.state.terms);
+    !this.state.agree ? addResponseMessage("You have Agreed, Thanks!") : console.log("Disagreed");
+    // addResponseMessage("You have Agreed, Thanks!");
   };
 
   handleNewUserMessage = newMessage => {
@@ -125,15 +127,14 @@ class Chatbot extends Component {
     setTimeout(() => {
       toggleMsgLoader();
       if (newMessage === "fruits") {
-        setQuickButtons([
+        (setQuickButtons([
           { label: "Apple", value: "apple" },
           { label: "Orange", value: "orange" },
           { label: "Pear", value: "pear" },
           { label: "Banana", value: "banana" }
-        ]);
-      } else if (newMessage === "heyo") {
-        renderCustomComponent(this.buttonComponent);
-      } else {
+        ])) 
+      }   
+      else {
         addResponseMessage("Didnt get it");
       }
     }, 2000);

@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Bogle';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Bogle'),
+         url('../Web/BogleWeb-Regular.eot') format('embedded-opentype'), /* IE6-IE8 */
+         url('../Web/BogleWeb-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../Web/BogleWeb-Regular.woff') format('woff'), /* Modern Browsers */
+         url('../Web/BogleWeb-Regular.ttf')
+         url('../Web/BogleWeb-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  }

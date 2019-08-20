@@ -1,3 +1,5 @@
+/* @import '../../styles/variables.scss'; */
+
 /**Styles for Chat widget**/
 .feedback-button {
   padding: 0 0 0 18%;
@@ -43,34 +45,40 @@
   font-size: 25px;
   margin-bottom: 50px;
 }
+.terms{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    /* display: inline; */
+}
 .terms button{
-  background-color: #008cba;
+  background-color: #0072CE;
   border : 0;
   border-radius: 5px;
   width : 100px;
   font-size: 15px;
+  padding : 4px !important;
 }
+.terms button:hover {
+    background-color: #FFB81C;
+    color: #333333 !important;
+  }
 .terms-hide{
     display : none;
+}
+.disagree {
+    margin-left: 10px;
 }
 .title {
   padding: 10px 0;
   font-size: 18px;
 }
 .rcw-conversation-container {
-  /* font-family: "bogle"; */
+  /* font-family: "Bogle"; */
   font-size: 14px;
 }
 .rcw-conversation-container .rcw-header {
   display: none;
-  /* background-color: #3B7FC4;
-    border-radius: 0px 0px 0 0;
-    color: #fff;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding: 6px 10px; */
 }
 
 .rcw-conversation-container .rcw-title {
