@@ -1,13 +1,13 @@
 @import "../../../../../../../../scss/variables.scss";
 
 .quick-button {
-  background: none;
-  border-radius: 15px;
-  border: 2px solid $turqois-1;
-  font-weight: bold;
+  background: #3C80C4;
+  border-radius: 6px;
+  border: 0;
   padding: 5px 10px;
   cursor: pointer;
   outline: 0;
+  width : 70px;
 
   &:active {
     background: $turqois-1;

@@ -1,0 +1,59 @@
+// .filter {
+//     background-color: aliceblue;
+//     .form-control,.input-group-text{
+//         background-color: rgb(243, 243, 243);
+//     }
+//     .btn {
+//         // align-content: flex-end;
+//         h4 {
+//             display: inline-flex;
+//             font-weight: bold;
+//             font-size: 40px;
+//             opacity: 0.2;
+//             color: #2678D6;
+//             padding-right : 50px;
+//             // text-align: left;
+//           }
+//           color : #2678D6;
+//           font-weight: 500;
+//     }
+//     .filter-body {
+//         display: flex;
+//     }
+//   }
+
+.accordion {
+  .header {
+    background-color: #78b9e5;
+    display: inline-flex;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 40px;
+    opacity: 0.4;
+    color: white;
+  }
+  h4 {
+    padding-top: 15px;
+    padding-left: 10px;
+    opacity: 0.7;
+    color: black;
+  }
+  .card {
+    border: 0;
+  }
+  .card-body1 {
+    display: inline-flex;
+    .form-control,
+    .input-group-text {
+      background-color: rgb(243, 243, 243);
+    }
+  }
+}
+
+.applyButton {
+  border-radius: 1rem;
+  background-color: #004c91;
+  border-color: #004c91;
+}

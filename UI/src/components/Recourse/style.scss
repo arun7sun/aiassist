@@ -1,0 +1,25 @@
+.recourse .btn {
+    // text-decoration: none;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+    // font-weight: bold;
+    padding: 0px 3px;
+    line-height: 24px;
+    height: auto;
+    display: -webkit-box;
+    text-align: center;
+    background-color: #0072CE;
+    margin-top: 10px;
+    width : 100px;
+  }
+ 
+.recourse{
+    margin-right: auto;
+    margin-left: 20px;
+}
+  
+  .recourse .btn:hover {
+    background-color: #FFB81C;
+    color: #333333 !important;
+  }

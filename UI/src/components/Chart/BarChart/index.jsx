@@ -11,35 +11,34 @@ export default class Barchart extends Component {
     enableSelection = false
     static defaultProps = {
         data: {
-            id: "NPS_by_Delivery_Staff",
-            title: "Demand Mix",
-            legend: {
-                enabled: false,   
+          id: "test_chart",
+          title: "Title goes here",
+          legend: {
+            enabled: false
+          },
+          type: "column",
+          height: 350,
+          xlabel : 'x axis',
+          Xaxis: ["A", "B", "C", "D", "E", "F"],
+          plotOptions: {
+            series: {
+              pointPadding: 0,
+              groupPadding: 0.1
+              // pointWidth: data.plotOptions.series.pointWidth,
             },
-            type: 'column',
-            height:230,
-            Xaxis:[
-                'Mensa',
-                'ADM',
-                'Marvel',
-                'Dexter',
-                'Franchise',
-                'SDA'
-            ],      
-            plotOptions: {
-                series: {
-                      ointPadding: 0,
-                      groupPadding: 0.1,
-                      // pointWidth: data.plotOptions.series.pointWidth,
-                  }
-              },     
-            data: [{
-                name: '',
-                data: [49.9, 71.5, 106.4, 129.2, 144.0],
-                color: '#ef924b'
-            }]
+            column : {
+                pointWidth : '50'
+            }
+          },
+          data: [
+            {
+              name: "",
+              data: [49.9, 71.5, 106.4, 129.2, 144.0],
+              color: "#ef924b"
+            }
+          ]
         }
-    };
+      };
 
     buildChart = {}
 
@@ -68,12 +67,15 @@ export default class Barchart extends Component {
             },
             xAxis: {
                 categories:data.Xaxis,
-                crosshair: true
+                crosshair: true,
+                title: {
+                    text: data.xlabel
+                }
             },
             yAxis: {
                 min: 0,
                 title: {
-                    text: ''
+                    text: data.ylabel
                 }
             },
             tooltip: {
@@ -83,7 +85,10 @@ export default class Barchart extends Component {
             },
             credits : false,
             plotOptions:{
-              series: data.plotOptions.series
+              series: data.plotOptions.series,
+              column : {
+                  pointWidth : data.plotOptions.column.pointWidth
+              }
             },
             series: data.data,
             exporting: {
@@ -97,7 +102,7 @@ export default class Barchart extends Component {
 
     render() {
         const { id } = this.props.data;
-        return <div id={id} className="Line-chart-v" ref={el => { this.LineChartSVG = el; }} />
+        return <div id={id} className="col-12 Line-chart-v" ref={el => { this.LineChartSVG = el; }} />
     }
 
 }

@@ -1,13 +1,11 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 
-import login from 'services/login';
 import home from 'services/home';
 import header from 'services/header';
 
 
 const appReducer = combineReducers({
-    login,
     home,
     header,
     routing: routerReducer

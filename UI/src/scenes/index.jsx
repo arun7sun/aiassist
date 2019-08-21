@@ -1,29 +1,66 @@
-import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import React, { Component } from "react";
+import { Switch, Route } from "react-router-dom";
+// import { connect } from 'react-redux';
 import "./style";
+import Filter from "components/Filter";
+import BarChart from "components/Chart/BarChart"
 
-import { connect } from 'react-redux';
+class Landingpage extends Component {
+  constructor() {
+    super();
 
+    this.state = {
+      clicked: false,
+      view: false,
+      array: [],
+      addTool: false,
+      id :0
+    };
 
+    this.handleClick = this.handleClick.bind(this);
+    this.handleView = this.handleView.bind(this);
+    this.handleAdd = this.handleAdd.bind(this);
+  }
 
-const mapStateToProps = (state, ownProps) => ({
-
-});
-
-const mapDispatchToProps = dispatch => ({
-    
-});
-
-
-class Dashboard extends Component {
-
-
-    render = () => {
-        return (
-            <div>
-            </div>
+  handleClick() {
+    this.setState({
+      clicked: !this.state.clicked,
+      id : null
+    });
+  }
+  handleView() {
+    this.setState({
+      view: !this.state.view
+    });
+  }
+  handleAdd() {
+    this.setState({
+      addTool: !this.state.displayQuestions,
+      id : ++this.state.id,
+      array : this.state.array.concat([this.state.id])
+    });
+  }
+  render = () => {
+      let array = null;
+    if ( this.state.addTool ) {
+        array = (
+        <div>
+             { this.state.array.map((array, index) => {
+                  return <Chart />
+             })}
+        </div> 
         )
-    }
+   }
+    return (
+      <main className="main-container">
+        {/* {<div className="row"><button className="btn btn-info" onClick={this.handleAdd}>
+          +
+        </button>
+        {array}
+        </div>} */}
+        <Filter/>  
+      </main>
+    );
+  };
 }
-export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
-
+export default Landingpage;
