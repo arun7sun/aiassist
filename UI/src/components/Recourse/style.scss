@@ -7,14 +7,12 @@
     padding: 0px 3px;
     line-height: 24px;
     height: auto;
-    display: inline-block;
+    display: -webkit-box;
     text-align: center;
     background-color: #0072CE;
+    margin-top: 10px;
+    width : 100px;
   }
-.recourse button{
-    margin-right: 15px;
-    width : 70px;
-}
  
 .recourse{
     margin-right: auto;

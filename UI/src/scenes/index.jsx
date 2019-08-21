@@ -58,9 +58,7 @@ class Landingpage extends Component {
         </button>
         {array}
         </div>} */}
-        <Filter/>
-        {/* <BarChart/> */}   
-        
+        <Filter/>  
       </main>
     );
   };

@@ -5,22 +5,15 @@ import { loadState } from "helpers/LocalStorage";
 import { NavLink } from "react-router-dom";
 import Chatbot from "components/Chatbot";
 import InputBox from "components/InputBox";
-
 import "./style";
 import "../Chatbot/style.css";
 
-// import { getHeader, updateHeader } from 'services/header/actions';
-// import { login } from 'services/login/actions';
-
 const mapStateToProps = (state, ownProps) => ({
-  // user: state.login.user,
-  // header: state.header.header
+
 });
 
 const mapDispatchToProps = dispatch => ({
-  // getHeader: () => dispatch(getHeader()),
-  // login: (token,isAuth) => dispatch(login(token,isAuth)),
-  // updateHeader: (data) => dispatch(updateHeader(data)),
+
 });
 
 class Header extends Component {
@@ -31,17 +24,6 @@ class Header extends Component {
   state = {
     profileClicked: false
   };
-
-  componentWillMount = () => {};
-  // componentDidMount = () => {
-  //   addResponseMessage("Hi User!");
-  //   toggleWidget();
-  // };
-
-  // componentWillUnmount() {
-  //   toggleWidget();
-  //   }
-
   componentWillReceiveProps = nextProps => {};
   handleProfileClick = () => {
     if (!this.state.profileClicked) {

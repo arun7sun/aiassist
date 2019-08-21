@@ -68,10 +68,12 @@ class Chatbot extends Component {
     toggleWidget();
     addResponseMessage(this.link.title);
     renderCustomComponent(this.welcomeMessage);
-    // renderCustomComponent(this.clickQuenry,{props : [{ name: "Job Family", value: "job" }, { name: "Asc Type", value: "b" }, { name: "Department", value: "c" }, { name: "Grade Level", value: "d" }] },true);
+    renderCustomComponent(this.clickQuery,[],true);
+
   };
   componentDidUpdate = () => {
     renderCustomComponent(this.welcomeMessage);
+
   };
 
   componentWillUnmount() {
@@ -93,7 +95,7 @@ class Chatbot extends Component {
 
   clickQuery = () => {
     return (
-      <ClickQuery/>
+      <ClickQuery props ={this.recourseButton}/>
     );
   };
 
@@ -122,23 +124,6 @@ class Chatbot extends Component {
         }
       });
   };
-  handleNewUserMessage = newMessage => {
-    toggleMsgLoader();
-    setTimeout(() => {
-      toggleMsgLoader();
-      if (newMessage === "fruits") {
-        (setQuickButtons([
-          { label: "Apple", value: "apple" },
-          { label: "Orange", value: "orange" },
-          { label: "Pear", value: "pear" },
-          { label: "Banana", value: "banana" }
-        ])) 
-      }   
-      else {
-        addResponseMessage("Didnt get it");
-      }
-    }, 2000);
-  };
 
   manageResponse = body => {
     return body.message.length == 1
@@ -146,7 +131,6 @@ class Chatbot extends Component {
       : "Received Multiple data results - Yet to be handled";
   };
 
-  componentWillReceiveProps = () => {};
 
   openModal() {
     this.setState({ modalIsOpen: true });

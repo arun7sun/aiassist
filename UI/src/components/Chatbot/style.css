@@ -1,4 +1,19 @@
-/* @import '../../styles/variables.scss'; */
+/*Feedback button, Welcome Msg, Chat Widget, font*/
+
+@font-face {
+  font-family: "BogleWeb-Regular";
+  src: url("../../fontawesome/bogle/Web/BogleWeb-Regular.eot");
+  src: url("../../fontawesome/bogle/Web/BogleWeb-Regular.eot?#iefix") format("embedded-opentype"),
+  url("../../fontawesome/bogle/Web/BogleWeb-Regular.woff2") format("woff2"),
+  url("../../fontawesome/bogle/Web/BogleWeb-Regular.woff") format("woff"),
+  url("../../fontawesome/bogle/Web/BogleWeb-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  }
+  
+  .rcw-conversation-container{
+  font-family: "BogleWeb-Regular";
+  }
 
 /**Styles for Chat widget**/
 .feedback-button {
@@ -47,7 +62,7 @@
 }
 .terms{
     display: flex;
-    margin-left: auto;
+    margin-left: 35px;
     margin-right: auto;
     /* display: inline; */
 }
@@ -72,10 +87,6 @@
 .title {
   padding: 10px 0;
   font-size: 18px;
-}
-.rcw-conversation-container {
-  /* font-family: "Bogle"; */
-  font-size: 14px;
 }
 .rcw-conversation-container .rcw-header {
   display: none;
