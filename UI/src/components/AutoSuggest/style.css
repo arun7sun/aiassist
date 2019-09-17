@@ -1,0 +1,15 @@
+.Autosuggest{
+    width: -webkit-fill-available;
+    
+}
+
+.suggestionOverLay{
+    z-index: 1000;
+    background: gray;
+    position: absolute;
+    /* top: 0; */
+    bottom: 37px;
+    width: 100%;
+    left: 0;
+    overflow: auto;
+}

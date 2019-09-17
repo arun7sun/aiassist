@@ -5,13 +5,24 @@ import { handleAgree } from "../../../../../../../../Chatbot";
 // import send from '@assets/send_button.svg';
 
 import "./style.scss";
+import Autosuggest from "../../../../../../../../AutoSuggest";
+import metricsvals from './metrics.js'
+import dimensions from './dimensions.js'
+import ReactTextareaAutocomplete from "@webscopeio/react-textarea-autocomplete";
 
 class Sender extends Component {
-  input = React.createRef();
-
-  componentDidUpdate() {
-    this.input.current.focus();
+  // rta = React.createRef();
+  // componentDidUpdate() {
+  //   this.input.current.focus();
+  // }
+  state = {
+    textt : ''
+  };
+  sendThru = () => {
+    this.rta = null;
+    console.log("rta val",this.rta.value)
   }
+  
   render() {
     const {
       sendMessage,
@@ -27,7 +38,7 @@ class Sender extends Component {
             <button className="book-icon">
               <i className="fas fa-book" />
             </button>
-            <input
+            {/* <input
               type="text"
               className="rcw-new-message"
               name="message"
@@ -35,10 +46,11 @@ class Sender extends Component {
               disabled={disabledInput}
               autoFocus={autofocus}
               autoComplete="off"
-              ref={this.input}
-            />
-            <button type="submit" className="send-icon">
-              <i className="fas fa-paper-plane" alt="send" />
+              ref={this.rta}
+            /> */}
+            <Autosuggest items = {metricsvals} dimensions = {dimensions} text = {this.state.textt} reff={this.rta}/>
+            <button type="submit" className="send-icon" onClick = {this.sendThru} >
+              <i className="fas fa-paper-plane" alt="send"/>
             </button>
           </form>
         ) : (

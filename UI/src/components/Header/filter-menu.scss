@@ -1,0 +1,128 @@
+.filter-menu {
+  position: fixed;
+  right: 0;
+  height: 100%;
+  top: 50px;
+  background: #afb1b4;
+  min-width: 250px;
+  overflow: auto;
+  .custom-control {
+    padding: 0;
+  }
+
+  .visualize {
+    
+      button{
+          width: 100%;
+          background: #004c91;
+          color: white;
+          text-align: center;
+      }
+  }
+
+  label{
+      margin-bottom: 0;
+  }
+  .divider{
+      border:1px solid #d5d5d5;
+      padding: 0;
+      border-right: 0;
+      border-left: 0;
+      h6{
+          margin-bottom: 0;
+          margin-top: 5px;
+      }
+  }
+
+  .chart-type{
+    border:1px solid #d5d5d5;
+    padding: 0;
+    min-height: 130px;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 0;
+    h6{
+        margin-bottom: 0;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    i{
+        margin-right: 10px;
+    }
+  }
+
+  ul {
+    padding: 0;
+
+    .checkmark{
+        margin-top: -5px;
+    }
+
+    input[type="checkbox"] {
+      box-sizing: border-box;
+      height: 14px;
+      width: 15px;
+      margin-top: 10px;
+
+      &:checked{
+          background: red;
+      }
+    }
+  }
+
+  .col-12 {
+    margin: 0 auto;
+    padding: 0 5px;
+  }
+
+  .close-button {
+    color: #004c91;
+    font-size: 15px;
+    width: 100%;
+    text-align: right;
+    .fa-close {
+      color: gray;
+    }
+  }
+
+  #accordion {
+    width: 250px;
+    .card {
+      width: 100%;
+      background: #004c91;
+      box-shadow: none;
+      border: none;
+      min-width: 250px;
+      margin: 0 0 10px 0;
+      .card-header {
+        padding: 0 10px 3px;
+        a {
+          color: white;
+          display: block;
+          i {
+            margin-top: 4px;
+          }
+        }
+      }
+      .card-body {
+        background: whitesmoke;
+        padding: 5px;
+      }
+
+      /*****nav pills***/
+      .nav-pills {
+    
+        .nav-link {
+          padding: 2px 10px 3px;
+          font-size: 14px;
+          color: #fff;
+          background-color: #007bff;
+          width: 120px;
+          border-radius: 5px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

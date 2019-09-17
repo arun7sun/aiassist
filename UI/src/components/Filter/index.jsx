@@ -10,25 +10,6 @@ import apiPaths from "../../apiPaths";
 
 export default class Filter extends Component {
   state = {
-    // filters: [
-    //   { label: "HIRE_DATE", value: false },
-    //   { label: "JOB_FAMILY", value: false },
-    //   { label: "JOB_DESC", value: false },
-    //   { label: "PAY_LEVEL", value: false },
-    //   { label: "STORE_NUMBER", value: false },
-    //   { label: "MANAGER_NAME", value: false },
-    //   { label :"ASSO_NAME", value: false},
-    //   { label :"SERVICE_NOW", value: false},
-    //   { label :"ZOOM", value: false},
-    //   { label :"SLACK", value: false},
-    //   { label :"WORKPLACE", value: false},
-    //   { label :"L2", value: false},
-    //   { label :"L3", value: false},
-    //   { label :"L4", value: false},
-    //   { label :"L5", value: false}
-
-    // ],
-  
     hiredate :false,
     jobfamily:false,
     jobdesc:false,
@@ -182,28 +163,7 @@ export default class Filter extends Component {
   };
 
   render() {
-    // const options = [
-    //   { value: "a", label: "A" },
-    //   { value: "b", label: "B" },
-    //   { value: "c", label: "C" }
-    // ];
-    // const erth = [
-    //   { value: "Hire Date", label: "HIRE_DATE" },
-    //   { value: "Job Family", label: "JOB_FAMILY" },
-    //   { value: "Job Description", label: "JOB_DESC" },
-    //   { value: "Pay Level", label: "PAY_LEVEL" },
-    //   { value: "Store Number", label: "STORE_NUMBER" },
-    //   { value: "Manager Name", label: "MANAGER_NAME" },
-    //   { value: "Zoom", label: "ZOOM" },
-    //   { value: "Slack", label: "SLACK" },
-    //   { value: "Service Now", label: "SERVICE_NOW" },
-    //   { value: "Workplace", label: "WORKPLACE" },
-    //   { value: "L2", label: "L2" },
-    //   { value: "L3", label: "L3" },
-    //   { value: "L4", label: "L4" },
-    //   { value: "L5", label: "L5" },
-    //   { value: "Associate Name", label: "ASSO_ NAME" },
-    // ];
+   
     return (
       <div id="accordion" className="accordion">
         <div className="row">
@@ -250,25 +210,7 @@ export default class Filter extends Component {
                   <i>Fields</i>
                 </strong>{" "}
                 <br />
-                {/* <div className="input-group mb-3">
-                  <div className="input-group-prepend">
-                    <span className="input-group-text" id="basic-addon1">
-                      <i className="fa fa-search" aria-hidden="true" />
-                    </span>
-                  </div>
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Search"
-                    aria-label="Username"
-                    aria-describedby="basic-addon1"
-                  />
-                </div> */}
-                {/* <p>> Label 1 </p> */}
-                {/* <label for="f1" onClick={() => this.handleFilter("HIRE_DATE")}>Hire Date</label>
-                <input id="f1"
-                  type="checkbox"
-                /> */}
+                
 
        <label>
           <input

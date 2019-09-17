@@ -6,15 +6,13 @@ import { NavLink } from "react-router-dom";
 import Chatbot from "components/Chatbot";
 import InputBox from "components/InputBox";
 import "./style";
+import "./sideMenu";
+import"./filter-menu";
 import "../Chatbot/style.css";
 
-const mapStateToProps = (state, ownProps) => ({
+const mapStateToProps = (state, ownProps) => ({});
 
-});
-
-const mapDispatchToProps = dispatch => ({
-
-});
+const mapDispatchToProps = dispatch => ({});
 
 class Header extends Component {
   handleNewUserMessage = newMessage => {
@@ -52,19 +50,6 @@ class Header extends Component {
       <div className="section">
         <nav className="navbar navbar-expand-lg ">
           <div className="d-flex">
-            <NavLink to={"/"} className="main-logo">
-              <img className="mainlogo" src="/images/logowhite.svg" />
-            </NavLink>
-            <NavLink to={"/"} className="spark-logo">
-              <img src="/images/Walmart_logo_spark.png" />
-            </NavLink>
-            <button
-              className="button-hide"
-              data-toggle="collapse"
-              data-target="#collapsibleNavbar"
-            >
-              <i className="fas fa-bars" />
-            </button>
             <button
               className="navbar-toggler collapsed"
               data-toggle="collapse"
@@ -72,6 +57,19 @@ class Header extends Component {
             >
               <i className="fas fa-bars" />
             </button>
+            <button
+              className="button-hide"
+              data-toggle="collapse"
+              data-target="#collapsibleNavbar"
+            >
+              <i className="fas fa-bars" />
+            </button>
+            <NavLink to={"/"} className="main-logo">
+              <img className="mainlogo" src="/images/logowhite.svg" />
+            </NavLink>
+            <NavLink to={"/"} className="spark-logo">
+              <img src="/images/Walmart_logo_spark.png" />
+            </NavLink>
           </div>
           <InputBox />
           <Chatbot handleNewUserMessage={this.handleNewUserMessage} />
@@ -99,8 +97,15 @@ class Header extends Component {
                 <img src="images/icon.png" />
                 <span>Adithyaaaa </span>
               </a>
-              <div className="dropdown-menu dropdown-menu-right" style={{"minWidth":"50px"}} aria-labelledby="navbarDropdown">
-                <a className="dropdown-item" href="http://localhost:3000/logout">
+              <div
+                className="dropdown-menu dropdown-menu-right"
+                style={{ minWidth: "50px" }}
+                aria-labelledby="navbarDropdown"
+              >
+                <a
+                  className="dropdown-item"
+                  href="http://localhost:3000/logout"
+                >
                   Logout
                 </a>
               </div>
@@ -109,8 +114,9 @@ class Header extends Component {
         </nav>
 
         <div className="navbar-collapse collapse" id="collapsibleNavbar">
-          <b>Hello</b>
+          
         </div>
+
       </div>
     );
   };

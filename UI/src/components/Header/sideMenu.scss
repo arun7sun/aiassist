@@ -1,0 +1,38 @@
+
+.side-menu-action{
+    width: 0%;
+    animation-delay: 0.5s;
+}
+
+.side-menu{
+    background: #2e75b6;
+    width: 15%;
+    height:100vh;
+    padding: 0;
+    ul{
+        padding: 0;
+        list-style: none;
+        li{
+            a{
+                padding: 10px;
+                font-size: 14px;
+                text-align: center;
+                width: 100%;
+                border-bottom: 1px solid  #1f4e79;
+                display: block;
+                color: white;
+                text-transform: uppercase;
+                text-decoration: none;
+
+                &:hover{
+                    background-color: #1f4e79;
+                    color: white;
+                }
+                &.active{
+                    background-color: #1f4e79;
+                    color: white;
+                } 
+            }
+        }
+    }
+}
